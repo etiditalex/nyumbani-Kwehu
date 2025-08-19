@@ -18,7 +18,7 @@ const properties = [
         price: "KSh 8,500,000",
         type: "Villa",
         status: "For Sale",
-        image: "property1.jpg",
+        image: "https://via.placeholder.com/400x250/A08050/FFFFFF?text=Property+1",
         features: {
             bedrooms: 4,
             bathrooms: 3,
@@ -33,7 +33,7 @@ const properties = [
         price: "KSh 2,200,000",
         type: "Apartment",
         status: "For Sale",
-        image: "property2.jpg",
+        image: "https://via.placeholder.com/400x250/A08050/FFFFFF?text=Property+2",
         features: {
             bedrooms: 3,
             bathrooms: 2,
@@ -48,7 +48,7 @@ const properties = [
         price: "KSh 6,800,000",
         type: "House",
         status: "For Sale",
-        image: "property3.jpg",
+        image: "https://via.placeholder.com/400x250/A08050/FFFFFF?text=Property+3",
         features: {
             bedrooms: 5,
             bathrooms: 4,
@@ -63,7 +63,7 @@ const properties = [
         price: "KSh 4,500,000",
         type: "Commercial",
         status: "For Sale",
-        image: "property4.jpg",
+        image: "https://via.placeholder.com/400x250/A08050/FFFFFF?text=Property+4",
         features: {
             floors: 2,
             parking: "10 spaces",
@@ -78,7 +78,7 @@ const properties = [
         price: "KSh 12,000,000",
         type: "Villa",
         status: "For Sale",
-        image: "property5.jpg",
+        image: "https://via.placeholder.com/400x250/A08050/FFFFFF?text=Property+5",
         features: {
             bedrooms: 6,
             bathrooms: 5,
@@ -93,7 +93,7 @@ const properties = [
         price: "KSh 85,000/month",
         type: "Apartment",
         status: "For Rent",
-        image: "property6.jpg",
+        image: "https://via.placeholder.com/400x250/A08050/FFFFFF?text=Property+6",
         features: {
             bedrooms: 2,
             bathrooms: 2,
@@ -483,8 +483,16 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             loader.style.opacity = '0';
             setTimeout(() => loader.remove(), 500);
-        }, 1000);
+        }, 500);
     });
+    
+    // Also remove loader if it takes too long
+    setTimeout(() => {
+        if (loader && loader.parentNode) {
+            loader.style.opacity = '0';
+            setTimeout(() => loader.remove(), 500);
+        }
+    }, 3000);
     
     // Add spinner animation
     const spinnerStyle = document.createElement('style');
@@ -560,3 +568,4 @@ const heroStats = document.querySelector('.hero-stats');
 if (heroStats) {
     statsObserver.observe(heroStats);
 }
+
