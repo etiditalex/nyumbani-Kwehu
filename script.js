@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 8,500,000",
             type: "Villa",
             status: "For Sale",
-            image: "https://via.placeholder.com/400x250/A08050/FFFFFF?text=Property+1",
+            image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             features: {
                 bedrooms: 4,
                 bathrooms: 3,
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 2,200,000",
             type: "Apartment",
             status: "For Sale",
-            image: "https://via.placeholder.com/400x250/A08050/FFFFFF?text=Property+2",
+            image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             features: {
                 bedrooms: 3,
                 bathrooms: 2,
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 6,800,000",
             type: "House",
             status: "For Sale",
-            image: "https://via.placeholder.com/400x250/A08050/FFFFFF?text=Property+3",
+            image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             features: {
                 bedrooms: 5,
                 bathrooms: 4,
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 4,500,000",
             type: "Commercial",
             status: "For Sale",
-            image: "https://via.placeholder.com/400x250/A08050/FFFFFF?text=Property+4",
+            image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             features: {
                 floors: 2,
                 parking: "10 spaces",
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 12,000,000",
             type: "Villa",
             status: "For Sale",
-            image: "https://via.placeholder.com/400x250/A08050/FFFFFF?text=Property+5",
+            image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             features: {
                 bedrooms: 6,
                 bathrooms: 5,
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 85,000/month",
             type: "Apartment",
             status: "For Rent",
-            image: "https://via.placeholder.com/400x250/A08050/FFFFFF?text=Property+6",
+            image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             features: {
                 bedrooms: 2,
                 bathrooms: 2,
@@ -200,6 +200,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+        if (header) {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }
+    });
+
     // Property Card Template
     function createPropertyCard(property) {
         const features = property.features;
@@ -224,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return `
             <div class="property-card" data-id="${property.id}">
                 <div class="property-image">
-                    <img src="${property.image}" alt="${property.title}" onerror="this.src='https://via.placeholder.com/400x250/A08050/FFFFFF?text=Property+Image'">
+                    <img src="${property.image}" alt="${property.title}" onerror="this.src='https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
                     <div class="property-status">${property.status}</div>
                 </div>
                 <div class="property-content">
@@ -306,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="modal-content">
                     <span class="close" onclick="this.parentElement.parentElement.remove()">&times;</span>
                     <div class="property-detail">
-                        <img src="${property.image}" alt="${property.title}" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                        <img src="${property.image}" alt="${property.title}" style="width: 100%; height: 300px; object-fit: cover; border-radius: 12px; margin-bottom: 1rem;">
                         <h2>${property.title}</h2>
                         <p><strong>Location:</strong> ${property.location}</p>
                         <p><strong>Price:</strong> ${property.price}</p>
@@ -356,7 +368,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <span class="close" onclick="this.parentElement.parentElement.remove()">&times;</span>
                     <div class="virtual-tour-container">
                         <h2>Virtual Tour - ${property.title}</h2>
-                        <div class="tour-placeholder" style="height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(135deg, #A08050, #8B6B3A); color: white; border-radius: 8px;">
+                        <div class="tour-placeholder" style="height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(135deg, #A08050, #8B6B3A); color: white; border-radius: 12px;">
                             <i class="fas fa-vr-cardboard" style="font-size: 4rem; margin-bottom: 1rem;"></i>
                             <h3>360° Virtual Tour</h3>
                             <p>Experience ${property.title} in immersive detail</p>
@@ -450,20 +462,6 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 
-    // Header Scroll Effect
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('.header');
-        if (header) {
-            if (window.scrollY > 100) {
-                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-                header.style.backdropFilter = 'blur(10px)';
-            } else {
-                header.style.backgroundColor = 'var(--white)';
-                header.style.backdropFilter = 'none';
-            }
-        }
-    });
-
     // Search Functionality
     function searchProperties(query) {
         const filteredProperties = properties.filter(property => 
@@ -538,6 +536,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         statsObserver.observe(heroStats);
     }
+
+    // Scroll animations for sections
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observe all sections for animation
+    document.querySelectorAll('section').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        sectionObserver.observe(section);
+    });
 
     // Initialize everything
     console.log('Loading properties...');
