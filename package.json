@@ -1,0 +1,23 @@
+{
+  "name": "nyumbani-kwehu-developers",
+  "version": "1.0.0",
+  "description": "Nyumbani Kwehu Developers - Premier Real Estate Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000",
+    "build": "echo 'Static site - no build required'",
+    "deploy": "echo 'Deploy using your preferred platform'"
+  },
+  "keywords": [
+    "real-estate",
+    "property",
+    "kenya",
+    "coast",
+    "kilifi"
+  ],
+  "author": "Nyumbani Kwehu Developers",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
