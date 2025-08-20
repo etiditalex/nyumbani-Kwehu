@@ -660,8 +660,8 @@ p {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
     margin-top: 80px;
 }
 
@@ -1008,7 +1008,7 @@ p {
 
 .properties-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-top: 60px;
 }
@@ -1762,7 +1762,7 @@ p {
     }
     
     .properties-grid {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .developments-grid {
@@ -2279,7 +2279,7 @@ p {
     }
     
     .properties-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: 1fr;
         gap: 20px;
         margin-top: 40px;
     }
@@ -2303,9 +2303,63 @@ p {
         padding: 18px 25px;
     }
     
+    /* Mobile Services Grid */
+    .services-showcase {
+        padding: 60px 0;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 40px;
+    }
+    
+    .service-card {
+        margin: 0 5px;
+    }
+    
+    .service-card.featured {
+        grid-column: span 2;
+    }
+    
+    /* Mobile Properties Grid */
+    .properties-section {
+        padding: 60px 0;
+    }
+    
+    .properties-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    
+    /* Extra Small Mobile Devices */
+    @media (max-width: 480px) {
+        .services-grid {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        
+        .service-card.featured {
+            grid-column: span 1;
+        }
+        
+        .services-showcase {
+            padding: 40px 0;
+        }
+        
+        .about-showcase {
+            padding: 40px 0;
+        }
+        
+        .about-showcase-content {
+            gap: 30px;
+        }
+    }
+    
     /* Mobile Quick Links */
     .quick-links-section {
-        padding: 80px 0;
+        padding: 60px 0;
     }
     
     .quick-links-grid {
@@ -2327,12 +2381,12 @@ p {
     
     /* Mobile About Preview */
     .about-preview-section {
-        padding: 80px 0;
+        padding: 60px 0;
     }
     
     .about-preview-content {
         flex-direction: column;
-        gap: 40px;
+        gap: 30px;
         text-align: center;
     }
     
@@ -2342,7 +2396,7 @@ p {
     
     /* Mobile Contact Preview */
     .contact-preview-section {
-        padding: 80px 0;
+        padding: 60px 0;
     }
     
     .contact-preview-actions {
@@ -2353,7 +2407,7 @@ p {
     
     /* Mobile Developments */
     .developments-section {
-        padding: 80px 0;
+        padding: 60px 0;
     }
     
     .developments-grid {
@@ -2367,11 +2421,11 @@ p {
     
     /* Mobile Virtual Tour */
     .virtual-tour-section {
-        padding: 80px 0;
+        padding: 60px 0;
     }
     
     .virtual-tour-content {
-        gap: 40px;
+        gap: 30px;
     }
     
     .tour-placeholder {
@@ -2384,11 +2438,11 @@ p {
     
     /* Mobile About */
     .about-section {
-        padding: 80px 0;
+        padding: 60px 0;
     }
     
     .about-content {
-        gap: 40px;
+        gap: 30px;
     }
     
     .about-image img {
@@ -2397,7 +2451,7 @@ p {
     
     /* Mobile Contact */
     .contact-section {
-        padding: 80px 0;
+        padding: 60px 0;
     }
     
     .contact-content {
@@ -2551,7 +2605,7 @@ p {
     }
     
     .properties-grid {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(4, 1fr);
     }
     
     .developments-grid {
