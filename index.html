@@ -27,27 +27,27 @@
                             <a href="#home" class="nav-link active">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#for-sale" class="nav-link">FOR SALE</a>
+                            <a href="for-sale.html" class="nav-link">FOR SALE</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#for-rent" class="nav-link">FOR RENT</a>
+                            <a href="for-rent.html" class="nav-link">FOR RENT</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#developments" class="nav-link">DEVELOPMENTS</a>
+                            <a href="developments.html" class="nav-link">DEVELOPMENTS</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link">NYUMBANI INSIDER <i class="fas fa-chevron-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#blog">BLOG</a></li>
-                                <li><a href="#news">NEWS</a></li>
-                                <li><a href="#market-research">MARKET RESEARCH</a></li>
+                                <li><a href="blog.html">BLOG</a></li>
+                                <li><a href="news.html">NEWS</a></li>
+                                <li><a href="market-research.html">MARKET RESEARCH</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#about" class="nav-link">ABOUT US</a>
+                            <a href="about.html" class="nav-link">ABOUT US</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#contact" class="nav-link">CONTACT US</a>
+                            <a href="contact.html" class="nav-link">CONTACT US</a>
                         </li>
                     </ul>
                 </div>
@@ -66,6 +66,16 @@
             </div>
         </nav>
     </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Welcome to Nyumbani Developers</h1>
+                <p>Your premier real estate partner in Kenya's coastal region</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Hero Section with Carousel -->
     <section id="home" class="hero">
@@ -158,500 +168,100 @@
         </div>
     </section>
 
-    <!-- For Sale Section -->
-    <section id="for-sale" class="properties-section">
+    <!-- Quick Links Section -->
+    <section class="quick-links-section">
         <div class="container">
             <div class="section-header">
-                <h2>Properties For Sale</h2>
-                <p>Discover your perfect home in the coastal region</p>
+                <h2>Explore Our Services</h2>
+                <p>Discover everything we offer in coastal real estate</p>
             </div>
             
-            <div class="filters">
-                <select class="filter-select">
-                    <option value="">All Locations</option>
-                    <option value="nyali">Nyali</option>
-                    <option value="shanzu">Shanzu</option>
-                    <option value="kilifi">Kilifi</option>
-                    <option value="mtwapa">Mtwapa</option>
-                    <option value="vipingo">Vipingo</option>
-                </select>
-                <select class="filter-select">
-                    <option value="">Price Range</option>
-                    <option value="50k-500k">KSh 50,000 - 500,000</option>
-                    <option value="500k-2m">KSh 500,000 - 2,000,000</option>
-                    <option value="2m-5m">KSh 2,000,000 - 5,000,000</option>
-                    <option value="5m-10m">KSh 5,000,000 - 10,000,000</option>
-                </select>
-                <select class="filter-select">
-                    <option value="">Property Type</option>
-                    <option value="house">House</option>
-                    <option value="apartment">Apartment</option>
-                    <option value="villa">Villa</option>
-                    <option value="commercial">Commercial</option>
-                </select>
-            </div>
-
-            <div class="properties-grid" id="properties-grid">
-                <!-- Properties will be loaded dynamically -->
-            </div>
-        </div>
-    </section>
-
-    <!-- For Rent Section -->
-    <section id="for-rent" class="properties-section bg-light">
-        <div class="container">
-            <div class="section-header">
-                <h2>Properties For Rent</h2>
-                <p>Premium rental properties in prime coastal locations</p>
-            </div>
-            
-            <div class="properties-grid" id="rental-properties-grid">
-                <!-- Rental properties will be loaded dynamically -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Developments Section -->
-    <section id="developments" class="developments-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Latest Developments</h2>
-                <p>Upcoming and ongoing projects across the coastal region</p>
-            </div>
-            
-            <div class="developments-grid">
-                <div class="development-card">
-                    <div class="development-image">
-                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coastal Heights">
-                        <div class="development-status">Under Construction</div>
+            <div class="quick-links-grid">
+                <div class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <i class="fas fa-home"></i>
                     </div>
-                    <div class="development-content">
-                        <h3>Coastal Heights - Nyali</h3>
-                        <p>Luxury residential complex with ocean views featuring modern amenities, swimming pools, and 24/7 security. Each unit comes with a private balcony and premium finishes.</p>
-                        <div class="development-details">
-                            <span><i class="fas fa-home"></i> 50 Units</span>
-                            <span><i class="fas fa-calendar"></i> Ready Q4 2024</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Nyali Beach Road</span>
-                        </div>
-                        <button class="btn btn-primary">Learn More</button>
-                    </div>
+                    <h3>Properties For Sale</h3>
+                    <p>Browse our exclusive collection of properties available for purchase across the coastal region.</p>
+                    <a href="for-sale.html" class="btn btn-primary">View Properties</a>
                 </div>
                 
-                <div class="development-card">
-                    <div class="development-image">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kilifi Gardens">
-                        <div class="development-status">Planning</div>
+                <div class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <i class="fas fa-key"></i>
                     </div>
-                    <div class="development-content">
-                        <h3>Kilifi Gardens</h3>
-                        <p>Mixed-use development combining luxury apartments with retail spaces, restaurants, and recreational facilities. Designed for modern coastal living with sustainability in mind.</p>
-                        <div class="development-details">
-                            <span><i class="fas fa-building"></i> 25 Units</span>
-                            <span><i class="fas fa-calendar"></i> Ready Q2 2025</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Kilifi Town Center</span>
-                        </div>
-                        <button class="btn btn-primary">Learn More</button>
-                    </div>
-                </div>
-
-                <div class="development-card">
-                    <div class="development-image">
-                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Shanzu Marina">
-                        <div class="development-status">Pre-Launch</div>
-                    </div>
-                    <div class="development-content">
-                        <h3>Shanzu Marina</h3>
-                        <p>Exclusive waterfront development featuring luxury villas with private boat docks, infinity pools, and panoramic ocean views. Perfect for high-end buyers seeking coastal luxury.</p>
-                        <div class="development-details">
-                            <span><i class="fas fa-home"></i> 15 Villas</span>
-                            <span><i class="fas fa-calendar"></i> Ready Q3 2025</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Shanzu Beachfront</span>
-                        </div>
-                        <button class="btn btn-primary">Learn More</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Virtual Tour Section -->
-    <section class="virtual-tour-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Experience Properties Virtually</h2>
-                <p>Explore our properties from anywhere with our advanced virtual tour technology</p>
-            </div>
-            
-            <div class="virtual-tour-content">
-                <div class="virtual-tour-demo">
-                    <div class="tour-placeholder">
-                        <i class="fas fa-vr-cardboard"></i>
-                        <h3>Interactive Virtual Tours</h3>
-                        <p>360° immersive experience with detailed property walkthroughs</p>
-                        <button class="btn btn-primary">Start Virtual Tour</button>
-                    </div>
+                    <h3>Properties For Rent</h3>
+                    <p>Find your perfect rental property with premium amenities and prime coastal locations.</p>
+                    <a href="for-rent.html" class="btn btn-primary">View Rentals</a>
                 </div>
                 
-                <div class="virtual-tour-features">
-                    <div class="feature">
-                        <i class="fas fa-mobile-alt"></i>
-                        <div>
-                            <h4>Mobile Compatible</h4>
-                            <p>Experience tours on any device</p>
-                        </div>
+                <div class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <i class="fas fa-building"></i>
                     </div>
-                    <div class="feature">
-                        <i class="fas fa-eye"></i>
-                        <div>
-                            <h4>HD Quality</h4>
-                            <p>Crystal clear property views</p>
-                        </div>
+                    <h3>Latest Developments</h3>
+                    <p>Explore our upcoming and ongoing development projects with modern designs and luxury features.</p>
+                    <a href="developments.html" class="btn btn-primary">View Projects</a>
+                </div>
+                
+                <div class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    <div class="feature">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>24/7 Access</h4>
-                            <p>Tour properties anytime</p>
-                        </div>
+                    <h3>Market Insights</h3>
+                    <p>Stay informed with our comprehensive market research, trends, and investment analysis.</p>
+                    <a href="market-research.html" class="btn btn-primary">View Reports</a>
+                </div>
+                
+                <div class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <i class="fas fa-newspaper"></i>
                     </div>
+                    <h3>Latest News</h3>
+                    <p>Get updates on industry developments, company announcements, and market trends.</p>
+                    <a href="news.html" class="btn btn-primary">Read News</a>
+                </div>
+                
+                <div class="quick-link-card">
+                    <div class="quick-link-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Expert Blog</h3>
+                    <p>Access our expert insights, tips, and guides for successful coastal property investment.</p>
+                    <a href="blog.html" class="btn btn-primary">Read Blog</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about" class="about-section bg-light">
+    <!-- About Preview Section -->
+    <section class="about-preview-section bg-light">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
+            <div class="about-preview-content">
+                <div class="about-preview-text">
                     <h2>About Nyumbani Developers</h2>
                     <p>We are a premier real estate agency based in the Coast, dedicated to transforming the coastal property market. With over 15 years of experience, we specialize in offering a diverse range of residential and commercial properties, ensuring top-notch quality and exceptional value for our clients.</p>
-                    
-                    <p>Our team of experienced professionals is committed to providing personalized services, from property acquisition to development and management. With a deep understanding of the local market and a passion for innovation, Nyumbani Developers is your trusted partner in finding your dream property in the idyllic coastal region of Kilifi.</p>
-                    
-                    <div class="about-features">
-                        <div class="feature-item">
-                            <i class="fas fa-award"></i>
-                            <div>
-                                <h4>Premium Quality</h4>
-                                <p>Only the finest properties in prime locations with premium finishes and modern amenities</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-handshake"></i>
-                            <div>
-                                <h4>Personalized Service</h4>
-                                <p>Tailored solutions for every client with dedicated property consultants</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-map-marked-alt"></i>
-                            <div>
-                                <h4>Local Expertise</h4>
-                                <p>Deep understanding of the coastal market and emerging opportunities</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-chart-line"></i>
-                            <div>
-                                <h4>Market Insight</h4>
-                                <p>Comprehensive market analysis and investment guidance for clients</p>
-                            </div>
-                        </div>
-                    </div>
+                    <p>Our team of experienced professionals is committed to providing personalized services, from property acquisition to development and management.</p>
+                    <a href="about.html" class="btn btn-primary">Learn More About Us</a>
                 </div>
-                <div class="about-image">
+                <div class="about-preview-image">
                     <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nyumbani Developers Team">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="properties-section">
+    <!-- Contact Preview Section -->
+    <section class="contact-preview-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Nyumbani Insider Blog</h2>
-                <p>Stay updated with the latest insights, tips, and trends in coastal real estate</p>
-            </div>
-            
-            <div class="properties-grid">
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coastal Investment Guide">
-                        <div class="property-status">Featured</div>
+            <div class="contact-preview-content">
+                <div class="contact-preview-text">
+                    <h2>Ready to Get Started?</h2>
+                    <p>Contact us today to discuss your real estate needs and discover how we can help you find your dream coastal property.</p>
+                    <div class="contact-preview-actions">
+                        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                        <button class="btn btn-outline">Book Viewing</button>
                     </div>
-                    <div class="property-content">
-                        <h3>Complete Guide to Coastal Property Investment</h3>
-                        <p class="property-location">
-                            <i class="fas fa-calendar"></i>
-                            March 15, 2024
-                        </p>
-                        <p>Discover the secrets to successful coastal property investment, from location analysis to market timing and ROI optimization strategies.</p>
-                        <div class="property-actions">
-                            <button class="btn btn-primary">
-                                <i class="fas fa-book-open"></i> Read More
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury Living">
-                        <div class="property-status">Trending</div>
-                    </div>
-                    <div class="property-content">
-                        <h3>Luxury Living: Coastal Villas vs. Beach Apartments</h3>
-                        <p class="property-location">
-                            <i class="fas fa-calendar"></i>
-                            March 10, 2024
-                        </p>
-                        <p>Compare the benefits of coastal villas and beach apartments to find your perfect luxury coastal lifestyle.</p>
-                        <div class="property-actions">
-                            <button class="btn btn-primary">
-                                <i class="fas fa-book-open"></i> Read More
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Market Trends">
-                        <div class="property-status">Analysis</div>
-                    </div>
-                    <div class="property-content">
-                        <h3>2024 Coastal Real Estate Market Trends</h3>
-                        <p class="property-location">
-                            <i class="fas fa-calendar"></i>
-                            March 5, 2024
-                        </p>
-                        <p>Explore the latest trends shaping the coastal real estate market and what to expect in the coming months.</p>
-                        <div class="property-actions">
-                            <button class="btn btn-primary">
-                                <i class="fas fa-book-open"></i> Read More
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- News Section -->
-    <section id="news" class="properties-section bg-light">
-        <div class="container">
-            <div class="section-header">
-                <h2>Latest News</h2>
-                <p>Stay informed with the latest developments and announcements in coastal real estate</p>
-            </div>
-            
-            <div class="properties-grid">
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="New Development">
-                        <div class="property-status">Breaking</div>
-                    </div>
-                    <div class="property-content">
-                        <h3>New Luxury Development Launches in Vipingo</h3>
-                        <p class="property-location">
-                            <i class="fas fa-calendar"></i>
-                            March 20, 2024
-                        </p>
-                        <p>Exciting news! We're launching a new luxury development in Vipingo featuring premium villas with golf course views and world-class amenities.</p>
-                        <div class="property-actions">
-                            <button class="btn btn-primary">
-                                <i class="fas fa-newspaper"></i> Read Full Story
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Award">
-                        <div class="property-status">Award</div>
-                    </div>
-                    <div class="property-content">
-                        <h3>Nyumbani Developers Wins Best Real Estate Agency 2024</h3>
-                        <p class="property-location">
-                            <i class="fas fa-calendar"></i>
-                            March 18, 2024
-                        </p>
-                        <p>We're proud to announce that Nyumbani Developers has been awarded the prestigious "Best Real Estate Agency 2024" in the Coast region.</p>
-                        <div class="property-actions">
-                            <button class="btn btn-primary">
-                                <i class="fas fa-newspaper"></i> Read Full Story
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Partnership">
-                        <div class="property-status">Partnership</div>
-                    </div>
-                    <div class="property-content">
-                        <h3>Strategic Partnership with International Developers</h3>
-                        <p class="property-location">
-                            <i class="fas fa-calendar"></i>
-                            March 12, 2024
-                        </p>
-                        <p>We're excited to announce a new strategic partnership that will bring international standards and innovative designs to our coastal developments.</p>
-                        <div class="property-actions">
-                            <button class="btn btn-primary">
-                                <i class="fas fa-newspaper"></i> Read Full Story
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Market Research Section -->
-    <section id="market-research" class="properties-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Market Research & Insights</h2>
-                <p>Comprehensive analysis and data-driven insights to help you make informed real estate decisions</p>
-            </div>
-            
-            <div class="properties-grid">
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Q1 Report">
-                        <div class="property-status">Q1 2024</div>
-                    </div>
-                    <div class="property-content">
-                        <h3>Q1 2024 Coastal Real Estate Market Report</h3>
-                        <p class="property-location">
-                            <i class="fas fa-chart-line"></i>
-                            Market Analysis
-                        </p>
-                        <p>Comprehensive analysis of Q1 2024 market performance, including price trends, inventory levels, and investment opportunities across all coastal locations.</p>
-                        <div class="property-actions">
-                            <button class="btn btn-primary">
-                                <i class="fas fa-download"></i> Download Report
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Investment Guide">
-                        <div class="property-status">Guide</div>
-                    </div>
-                    <div class="property-content">
-                        <h3>Coastal Property Investment ROI Analysis</h3>
-                        <p class="property-location">
-                            <i class="fas fa-calculator"></i>
-                            Investment Guide
-                        </p>
-                        <p>Detailed ROI analysis for different property types and locations, helping investors maximize returns on coastal real estate investments.</p>
-                        <div class="property-actions">
-                            <button class="btn btn-primary">
-                                <i class="fas fa-download"></i> Download Guide
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Forecast">
-                        <div class="property-status">Forecast</div>
-                    </div>
-                    <div class="property-content">
-                        <h3>2024-2025 Market Forecast & Predictions</h3>
-                        <p class="property-location">
-                            <i class="fas fa-crystal-ball"></i>
-                            Future Trends
-                        </p>
-                        <p>Expert predictions and market forecasts for the coastal real estate sector, helping you plan your investments strategically.</p>
-                        <div class="property-actions">
-                            <button class="btn btn-primary">
-                                <i class="fas fa-download"></i> Download Forecast
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Get In Touch</h2>
-                <p>Ready to find your dream property? Contact us today!</p>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+254 700 000 000</p>
-                            <p>+254 733 000 000</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>info@nyumbandevelopers.com</p>
-                            <p>sales@nyumbandevelopers.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Office</h4>
-                            <p>Coast Road, Kilifi</p>
-                            <p>Kenya</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Working Hours</h4>
-                            <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                            <p>Saturday: 9:00 AM - 4:00 PM</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" name="phone" placeholder="Your Phone">
-                        </div>
-                        <div class="form-group">
-                            <select id="interest" name="interest">
-                                <option value="">I'm interested in...</option>
-                                <option value="buy">Buying a Property</option>
-                                <option value="rent">Renting a Property</option>
-                                <option value="sell">Selling a Property</option>
-                                <option value="invest">Investment Opportunities</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="5"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -680,11 +290,11 @@
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#for-sale">For Sale</a></li>
-                        <li><a href="#for-rent">For Rent</a></li>
-                        <li><a href="#developments">Developments</a></li>
-                        <li><a href="#about">About Us</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="for-sale.html">For Sale</a></li>
+                        <li><a href="for-rent.html">For Rent</a></li>
+                        <li><a href="developments.html">Developments</a></li>
+                        <li><a href="about.html">About Us</a></li>
                     </ul>
                 </div>
                 
