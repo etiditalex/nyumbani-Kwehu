@@ -225,7 +225,7 @@ p {
 
 .header-top-border {
     height: 3px;
-    background: linear-gradient(90deg, #4A5568 0%, #2D3748 100%);
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--primary-dark) 100%);
     width: 100%;
 }
 
@@ -261,29 +261,23 @@ p {
     justify-content: center;
 }
 
-.logo-circle {
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, #4A5568 0%, #2D3748 100%);
+.logo-image {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 8px rgba(74, 85, 104, 0.3);
+    object-fit: cover;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
 }
 
-.logo-text-small {
-    color: var(--white);
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: lowercase;
-    letter-spacing: 0.5px;
+.logo-image:hover {
+    transform: rotate(5deg);
 }
 
 .logo-text {
     font-size: 1.4rem;
     font-weight: 800;
-    color: #2D3748;
+    color: var(--secondary-color);
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -307,7 +301,7 @@ p {
 }
 
 .nav-link {
-    color: #2D3748;
+    color: var(--secondary-color);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
@@ -324,7 +318,7 @@ p {
     left: 0;
     width: 0;
     height: 2px;
-    background: #4A5568;
+    background: var(--gradient-primary);
     transition: var(--transition);
 }
 
@@ -334,7 +328,7 @@ p {
 }
 
 .nav-link:hover {
-    color: #4A5568;
+    color: var(--primary-color);
 }
 
 .dropdown {
@@ -354,7 +348,7 @@ p {
     visibility: hidden;
     transform: translateY(-10px);
     transition: var(--transition);
-    border: 1px solid rgba(74, 85, 104, 0.1);
+    border: 1px solid rgba(160, 128, 80, 0.1);
 }
 
 .dropdown:hover .dropdown-menu {
@@ -370,7 +364,7 @@ p {
 .dropdown-menu a {
     display: block;
     padding: 12px 25px;
-    color: #2D3748;
+    color: var(--secondary-color);
     text-decoration: none;
     transition: var(--transition);
     font-weight: 500;
@@ -378,8 +372,8 @@ p {
 }
 
 .dropdown-menu a:hover {
-    background: #F7FAFC;
-    color: #4A5568;
+    background: var(--light-gray);
+    color: var(--primary-color);
 }
 
 .nav-buttons {
@@ -389,7 +383,7 @@ p {
 }
 
 .booking-btn {
-    background: linear-gradient(135deg, #4A5568 0%, #2D3748 100%);
+    background: var(--gradient-primary);
     color: var(--white);
     border: none;
     padding: 12px 24px;
@@ -397,12 +391,12 @@ p {
     font-weight: 600;
     font-size: 0.9rem;
     transition: var(--transition);
-    box-shadow: 0 4px 15px rgba(74, 85, 104, 0.3);
+    box-shadow: var(--shadow);
 }
 
 .booking-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(74, 85, 104, 0.4);
+    box-shadow: var(--shadow-hover);
 }
 
 .hamburger {
@@ -1176,23 +1170,17 @@ p {
     justify-content: center;
 }
 
-.footer-logo .logo-circle {
+.footer-logo .logo-image {
     width: 40px;
     height: 40px;
-    background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 100%);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    object-fit: cover;
     box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+    transition: var(--transition);
 }
 
-.footer-logo .logo-text-small {
-    color: #2D3748;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: lowercase;
-    letter-spacing: 0.5px;
+.footer-logo .logo-image:hover {
+    transform: rotate(5deg);
 }
 
 .footer-logo h3 {
@@ -1315,13 +1303,9 @@ p {
         letter-spacing: 1px;
     }
     
-    .logo-circle {
-        width: 35px;
-        height: 35px;
-    }
-    
-    .logo-text-small {
-        font-size: 0.7rem;
+    .logo-image {
+        width: 40px;
+        height: 40px;
     }
     
     .nav-menu {
@@ -1335,7 +1319,7 @@ p {
         transition: var(--transition);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         padding: 40px 0;
-        border-top: 1px solid rgba(74, 85, 104, 0.1);
+        border-top: 1px solid rgba(160, 128, 80, 0.1);
     }
     
     .nav-menu.active {
