@@ -24,78 +24,78 @@ document.addEventListener('DOMContentLoaded', function() {
     const properties = [
         {
             id: 1,
-            title: "Coastal Villa - Nyali",
-            location: "Nyali, Mombasa",
+            title: "Nyali Beachfront Villa",
+            location: "Nyali Beach",
             price: "KSh 8,500,000",
             type: "Villa",
             status: "For Sale",
-            image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            image: "https://drive.google.com/uc?export=view&id=1wwrKolFzczcthFfe3WOgpu1OGW-5nSdT",
             features: {
                 bedrooms: 4,
                 bathrooms: 3,
-                sqft: "2,500"
+                sqft: "3,200"
             },
-            description: "Luxury villa with ocean views and modern amenities"
+            description: "Luxurious beachfront villa with stunning ocean views"
         },
         {
             id: 2,
-            title: "Kilifi Heights Apartment",
-            location: "Kilifi Town",
+            title: "Shanzu Modern Apartment",
+            location: "Shanzu Heights",
             price: "KSh 2,200,000",
             type: "Apartment",
             status: "For Sale",
-            image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            image: "https://drive.google.com/uc?export=view&id=1Agrjh7dK-SnYQrQGRT6fw8Ik7z2lzKVb",
+            features: {
+                bedrooms: 2,
+                bathrooms: 2,
+                sqft: "1,400"
+            },
+            description: "Modern apartment with city views and amenities"
+        },
+        {
+            id: 3,
+            title: "Kilifi Creek House",
+            location: "Kilifi Creek",
+            price: "KSh 6,800,000",
+            type: "House",
+            status: "For Sale",
+            image: "https://drive.google.com/uc?export=view&id=1k8m3MhLIAZMboLcqAPEDF6ECUnzGB2Qz",
+            features: {
+                bedrooms: 3,
+                bathrooms: 2,
+                sqft: "2,500"
+            },
+            description: "Beautiful house with creek views and private garden"
+        },
+        {
+            id: 4,
+            title: "Mtwapa Luxury Condo",
+            location: "Mtwapa",
+            price: "KSh 4,500,000",
+            type: "Condo",
+            status: "For Sale",
+            image: "https://drive.google.com/uc?export=view&id=1TZIzuEPs2GbvvBxY62DMLO3OaNDLZV_Y",
             features: {
                 bedrooms: 3,
                 bathrooms: 2,
                 sqft: "1,800"
             },
-            description: "Modern apartment in prime Kilifi location"
-        },
-        {
-            id: 3,
-            title: "Shanzu Beach House",
-            location: "Shanzu, Mombasa",
-            price: "KSh 6,800,000",
-            type: "House",
-            status: "For Sale",
-            image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            features: {
-                bedrooms: 5,
-                bathrooms: 4,
-                sqft: "3,200"
-            },
-            description: "Beachfront property with private access"
-        },
-        {
-            id: 4,
-            title: "Mtwapa Commercial Space",
-            location: "Mtwapa",
-            price: "KSh 4,500,000",
-            type: "Commercial",
-            status: "For Sale",
-            image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            features: {
-                floors: 2,
-                parking: "10 spaces",
-                sqft: "5,000"
-            },
-            description: "Prime commercial space for business"
+            description: "Luxury condo with modern amenities and pool access"
         },
         {
             id: 5,
-            title: "Vipingo Luxury Villa",
-            location: "Vipingo Ridge",
+            title: "Vipingo Beach House",
+            location: "Vipingo Beach",
             price: "KSh 12,000,000",
             type: "Villa",
             status: "For Sale",
-            image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            image: "https://drive.google.com/uc?export=view&id=1kmMYN9N817VC9RVCvqRSw-3o595cRWUN",
             features: {
-                bedrooms: 6,
-                bathrooms: 5,
+                bedrooms: 5,
+                bathrooms: 4,
                 sqft: "4,500"
             },
-            description: "Ultra-luxury villa with golf course views"
+            description: "Exclusive beachfront villa with private access"
         },
         {
             id: 6,
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 3,800,000",
             type: "Condo",
             status: "For Sale",
-            image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            image: "https://drive.google.com/uc?export=view&id=11LddcvzjKdOnPd88xJ6EqxPy9l0z4dN5",
             features: {
                 bedrooms: 2,
                 bathrooms: 2,
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 5,200,000",
             type: "Villa",
             status: "For Sale",
-            image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            image: "https://drive.google.com/uc?export=view&id=14P_zNrTmw93BkP8yI5jhVPF6EMBXEmQn",
             features: {
                 bedrooms: 3,
                 bathrooms: 3,
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 1,800,000",
             type: "Apartment",
             status: "For Sale",
-            image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            image: "https://drive.google.com/uc?export=view&id=1-lvRkwnQEwVNSLY09NErQrLZETTdii6H",
             features: {
                 bedrooms: 2,
                 bathrooms: 1,
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 85,000/month",
             type: "Apartment",
             status: "For Rent",
-            image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            image: "https://drive.google.com/uc?export=view&id=13TqFS3aOHYeyo97CYbVDy1cmfwrM5SL-",
             features: {
                 bedrooms: 2,
                 bathrooms: 2,
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 120,000/month",
             type: "House",
             status: "For Rent",
-            image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            image: "https://drive.google.com/uc?export=view&id=1JzvjuhlUOg998dXJzlrDOVForTyGZ8xo",
             features: {
                 bedrooms: 3,
                 bathrooms: 2,
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 45,000/month",
             type: "Studio",
             status: "For Rent",
-            image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            image: "https://drive.google.com/uc?export=view&id=1B9iQYacX9d2l1EVhm_zdRQsyjQ5nYxin",
             features: {
                 bedrooms: 1,
                 bathrooms: 1,
@@ -194,13 +194,73 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 180,000/month",
             type: "Villa",
             status: "For Rent",
-            image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            image: "https://drive.google.com/uc?export=view&id=1hOSOcDgH6HsHuYMx0LCBxZbGossLTjQ1",
             features: {
                 bedrooms: 4,
                 bathrooms: 3,
                 sqft: "3,500"
             },
             description: "Luxury villa rental with pool and garden"
+        },
+        {
+            id: 13,
+            title: "Vipingo Luxury Villa",
+            location: "Vipingo",
+            price: "KSh 15,000,000",
+            type: "Villa",
+            status: "For Sale",
+            image: "https://drive.google.com/uc?export=view&id=1EleWdFwCEp8aFgJQ6XcpJjlqrxpdjVLo",
+            features: {
+                bedrooms: 6,
+                bathrooms: 5,
+                sqft: "5,200"
+            },
+            description: "Ultra-luxury villa with panoramic ocean views"
+        },
+        {
+            id: 14,
+            title: "Nyali Penthouse",
+            location: "Nyali",
+            price: "KSh 9,500,000",
+            type: "Penthouse",
+            status: "For Sale",
+            image: "https://drive.google.com/uc?export=view&id=1-rVtR9LAVBoVQDBiWCJmyX2xVwbHHnab",
+            features: {
+                bedrooms: 4,
+                bathrooms: 3,
+                sqft: "3,800"
+            },
+            description: "Exclusive penthouse with rooftop terrace"
+        },
+        {
+            id: 15,
+            title: "Kilifi Executive Apartment",
+            location: "Kilifi",
+            price: "KSh 3,200,000",
+            type: "Apartment",
+            status: "For Sale",
+            image: "https://drive.google.com/uc?export=view&id=1a1fm-vV_kMIbX6pNqf5VCEY-uAX98M_7",
+            features: {
+                bedrooms: 3,
+                bathrooms: 2,
+                sqft: "1,600"
+            },
+            description: "Executive apartment with premium finishes"
+        },
+        {
+            id: 16,
+            title: "Shanzu Beach Villa",
+            location: "Shanzu Beach",
+            price: "KSh 7,800,000",
+            type: "Villa",
+            status: "For Sale",
+            image: "https://drive.google.com/uc?export=view&id=16_1NFzGRAqfgtm0-mcg0vHmPqd7f9sEH",
+            features: {
+                bedrooms: 4,
+                bathrooms: 3,
+                sqft: "3,200"
+            },
+            description: "Beachfront villa with private pool and garden"
         }
     ];
 
