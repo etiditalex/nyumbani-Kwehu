@@ -1008,8 +1008,8 @@ p {
 
 .properties-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     margin-top: 60px;
 }
 
@@ -1059,13 +1059,13 @@ p {
 }
 
 .property-content {
-    padding: 30px;
+    padding: 25px;
 }
 
 .property-title {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--secondary-color);
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-weight: 700;
 }
 
@@ -1078,10 +1078,10 @@ p {
 }
 
 .property-price {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: var(--primary-color);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .property-features {
@@ -2279,8 +2279,8 @@ p {
     }
     
     .properties-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
         margin-top: 40px;
     }
     
@@ -2551,7 +2551,7 @@ p {
     }
     
     .properties-grid {
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     }
     
     .developments-grid {
