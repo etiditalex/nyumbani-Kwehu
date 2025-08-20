@@ -385,7 +385,29 @@ p {
 }
 
 .nav-buttons {
-    display: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.booking-btn {
+    background: var(--gradient-primary);
+    color: var(--white);
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.booking-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
 }
 
 .hamburger {
@@ -1779,6 +1801,8 @@ p {
         padding: 0 15px;
         height: 75px;
         margin: 0;
+        justify-content: space-between;
+        gap: 0;
     }
     
     .nav-logo .logo-text {
@@ -1916,6 +1940,7 @@ p {
     
     .hamburger {
         display: flex;
+        margin-left: auto;
     }
     
     /* Mobile Hero Section */
@@ -2085,6 +2110,8 @@ p {
     .nav-container {
         padding: 0 10px;
         height: 70px;
+        justify-content: space-between;
+        gap: 0;
     }
     
     .nav-logo .logo-text {
