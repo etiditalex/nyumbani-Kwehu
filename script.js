@@ -517,12 +517,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const saleProperties = properties.filter(p => p.status === 'For Sale');
         const rentalProperties = properties.filter(p => p.status === 'For Rent');
         
+        console.log('Loading properties...', { saleProperties: saleProperties.length, rentalProperties: rentalProperties.length });
+        
         if (propertiesGrid) {
+            console.log('Properties grid found, loading sale properties...');
             propertiesGrid.innerHTML = saleProperties.map(createPropertyCard).join('');
+        } else {
+            console.log('Properties grid not found');
         }
         
         if (rentalPropertiesGrid) {
+            console.log('Rental properties grid found, loading rental properties...');
             rentalPropertiesGrid.innerHTML = rentalProperties.map(createPropertyCard).join('');
+        } else {
+            console.log('Rental properties grid not found');
         }
     }
 
@@ -842,6 +850,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize everything
     console.log('Loading properties...');
     loadProperties();
+    
+    // Fallback: Ensure properties are loaded after a short delay
+    setTimeout(() => {
+        console.log('Fallback: Checking properties again...');
+        loadProperties();
+    }, 1000);
+    
     console.log('Website initialized successfully!');
 });
 
