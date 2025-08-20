@@ -242,11 +242,12 @@ p {
 .nav-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 30px;
     height: 90px;
+    gap: 60px;
 }
 
 .nav-logo {
