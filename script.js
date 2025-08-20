@@ -13,6 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const propertiesGrid = document.getElementById('properties-grid');
     const rentalPropertiesGrid = document.getElementById('rental-properties-grid');
 
+    // Carousel Elements
+    const carouselSlides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    const indicators = document.querySelectorAll('.indicator');
+    let currentSlide = 0;
+
     // Sample Properties Data
     const properties = [
         {
@@ -122,6 +129,60 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Remove loader immediately
     removeLoader();
+
+    // Carousel Functions
+    function showSlide(index) {
+        // Remove active class from all slides and indicators
+        carouselSlides.forEach(slide => slide.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+        
+        // Add active class to current slide and indicator
+        carouselSlides[index].classList.add('active');
+        indicators[index].classList.add('active');
+        
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        const next = (currentSlide + 1) % carouselSlides.length;
+        showSlide(next);
+    }
+
+    function prevSlide() {
+        const prev = (currentSlide - 1 + carouselSlides.length) % carouselSlides.length;
+        showSlide(prev);
+    }
+
+    // Carousel Event Listeners
+    if (nextBtn) {
+        nextBtn.addEventListener('click', nextSlide);
+    }
+    
+    if (prevBtn) {
+        prevBtn.addEventListener('click', prevSlide);
+    }
+
+    // Indicator click events
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            showSlide(index);
+        });
+    });
+
+    // Auto-advance carousel
+    let carouselInterval = setInterval(nextSlide, 5000);
+
+    // Pause auto-advance on hover
+    const carousel = document.querySelector('.hero-carousel');
+    if (carousel) {
+        carousel.addEventListener('mouseenter', () => {
+            clearInterval(carouselInterval);
+        });
+        
+        carousel.addEventListener('mouseleave', () => {
+            carouselInterval = setInterval(nextSlide, 5000);
+        });
+    }
 
     // Mobile Menu Toggle
     if (hamburger) {
