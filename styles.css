@@ -607,10 +607,8 @@ p {
 }
 
 .hero-stats {
-    position: absolute;
-    bottom: 120px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    margin-top: 40px;
     display: flex;
     gap: 60px;
     background: rgba(255, 255, 255, 0.95);
@@ -619,6 +617,8 @@ p {
     border-radius: var(--border-radius-large);
     box-shadow: var(--shadow-hover);
     z-index: 10;
+    justify-content: center;
+    align-items: center;
 }
 
 .stat {
@@ -1878,9 +1878,8 @@ p {
         border-radius: 15px;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         position: relative;
-        bottom: auto;
-        left: auto;
-        transform: none;
+        justify-content: center;
+        align-items: center;
     }
     
     .stat h3 {
