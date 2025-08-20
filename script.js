@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 8,500,000",
             type: "Villa",
             status: "For Sale",
-            image: "https://drive.google.com/uc?export=view&id=1wwrKolFzczcthFfe3WOgpu1OGW-5nSdT",
+            image: "https://drive.google.com/thumbnail?id=1wwrKolFzczcthFfe3WOgpu1OGW-5nSdT&sz=w800",
             features: {
                 bedrooms: 4,
                 bathrooms: 3,
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 2,200,000",
             type: "Apartment",
             status: "For Sale",
-            image: "https://drive.google.com/uc?export=view&id=1Agrjh7dK-SnYQrQGRT6fw8Ik7z2lzKVb",
+            image: "https://drive.google.com/thumbnail?id=1Agrjh7dK-SnYQrQGRT6fw8Ik7z2lzKVb&sz=w800",
             features: {
                 bedrooms: 2,
                 bathrooms: 2,
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 6,800,000",
             type: "House",
             status: "For Sale",
-            image: "https://drive.google.com/uc?export=view&id=1k8m3MhLIAZMboLcqAPEDF6ECUnzGB2Qz",
+            image: "https://drive.google.com/thumbnail?id=1k8m3MhLIAZMboLcqAPEDF6ECUnzGB2Qz&sz=w800",
             features: {
                 bedrooms: 3,
                 bathrooms: 2,
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 4,500,000",
             type: "Condo",
             status: "For Sale",
-            image: "https://drive.google.com/uc?export=view&id=1TZIzuEPs2GbvvBxY62DMLO3OaNDLZV_Y",
+            image: "https://drive.google.com/thumbnail?id=1TZIzuEPs2GbvvBxY62DMLO3OaNDLZV_Y&sz=w800",
             features: {
                 bedrooms: 3,
                 bathrooms: 2,
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 12,000,000",
             type: "Villa",
             status: "For Sale",
-            image: "https://drive.google.com/uc?export=view&id=1kmMYN9N817VC9RVCvqRSw-3o595cRWUN",
+            image: "https://drive.google.com/thumbnail?id=1kmMYN9N817VC9RVCvqRSw-3o595cRWUN&sz=w800",
             features: {
                 bedrooms: 5,
                 bathrooms: 4,
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 3,800,000",
             type: "Condo",
             status: "For Sale",
-            image: "https://drive.google.com/uc?export=view&id=11LddcvzjKdOnPd88xJ6EqxPy9l0z4dN5",
+            image: "https://drive.google.com/thumbnail?id=11LddcvzjKdOnPd88xJ6EqxPy9l0z4dN5&sz=w800",
             features: {
                 bedrooms: 2,
                 bathrooms: 2,
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 5,200,000",
             type: "Villa",
             status: "For Sale",
-            image: "https://drive.google.com/uc?export=view&id=14P_zNrTmw93BkP8yI5jhVPF6EMBXEmQn",
+            image: "https://drive.google.com/thumbnail?id=14P_zNrTmw93BkP8yI5jhVPF6EMBXEmQn&sz=w800",
             features: {
                 bedrooms: 3,
                 bathrooms: 3,
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 1,800,000",
             type: "Apartment",
             status: "For Sale",
-            image: "https://drive.google.com/uc?export=view&id=1-lvRkwnQEwVNSLY09NErQrLZETTdii6H",
+            image: "https://drive.google.com/thumbnail?id=1-lvRkwnQEwVNSLY09NErQrLZETTdii6H&sz=w800",
             features: {
                 bedrooms: 2,
                 bathrooms: 1,
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 85,000/month",
             type: "Apartment",
             status: "For Rent",
-            image: "https://drive.google.com/uc?export=view&id=13TqFS3aOHYeyo97CYbVDy1cmfwrM5SL-",
+            image: "https://drive.google.com/thumbnail?id=13TqFS3aOHYeyo97CYbVDy1cmfwrM5SL-&sz=w800",
             features: {
                 bedrooms: 2,
                 bathrooms: 2,
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 120,000/month",
             type: "House",
             status: "For Rent",
-            image: "https://drive.google.com/uc?export=view&id=1JzvjuhlUOg998dXJzlrDOVForTyGZ8xo",
+            image: "https://drive.google.com/thumbnail?id=1JzvjuhlUOg998dXJzlrDOVForTyGZ8xo&sz=w800",
             features: {
                 bedrooms: 3,
                 bathrooms: 2,
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 45,000/month",
             type: "Studio",
             status: "For Rent",
-            image: "https://drive.google.com/uc?export=view&id=1B9iQYacX9d2l1EVhm_zdRQsyjQ5nYxin",
+            image: "https://drive.google.com/thumbnail?id=1B9iQYacX9d2l1EVhm_zdRQsyjQ5nYxin&sz=w800",
             features: {
                 bedrooms: 1,
                 bathrooms: 1,
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 180,000/month",
             type: "Villa",
             status: "For Rent",
-            image: "https://drive.google.com/uc?export=view&id=1hOSOcDgH6HsHuYMx0LCBxZbGossLTjQ1",
+            image: "https://drive.google.com/thumbnail?id=1hOSOcDgH6HsHuYMx0LCBxZbGossLTjQ1&sz=w800",
             features: {
                 bedrooms: 4,
                 bathrooms: 3,
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 15,000,000",
             type: "Villa",
             status: "For Sale",
-            image: "https://drive.google.com/uc?export=view&id=1EleWdFwCEp8aFgJQ6XcpJjlqrxpdjVLo",
+            image: "https://drive.google.com/thumbnail?id=1EleWdFwCEp8aFgJQ6XcpJjlqrxpdjVLo&sz=w800",
             features: {
                 bedrooms: 6,
                 bathrooms: 5,
@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 9,500,000",
             type: "Penthouse",
             status: "For Sale",
-            image: "https://drive.google.com/uc?export=view&id=1-rVtR9LAVBoVQDBiWCJmyX2xVwbHHnab",
+            image: "https://drive.google.com/thumbnail?id=1-rVtR9LAVBoVQDBiWCJmyX2xVwbHHnab&sz=w800",
             features: {
                 bedrooms: 4,
                 bathrooms: 3,
@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 3,200,000",
             type: "Apartment",
             status: "For Sale",
-            image: "https://drive.google.com/uc?export=view&id=1a1fm-vV_kMIbX6pNqf5VCEY-uAX98M_7",
+            image: "https://drive.google.com/thumbnail?id=1a1fm-vV_kMIbX6pNqf5VCEY-uAX98M_7&sz=w800",
             features: {
                 bedrooms: 3,
                 bathrooms: 2,
@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "KSh 7,800,000",
             type: "Villa",
             status: "For Sale",
-            image: "https://drive.google.com/uc?export=view&id=16_1NFzGRAqfgtm0-mcg0vHmPqd7f9sEH",
+            image: "https://drive.google.com/thumbnail?id=16_1NFzGRAqfgtm0-mcg0vHmPqd7f9sEH&sz=w800",
             features: {
                 bedrooms: 4,
                 bathrooms: 3,
