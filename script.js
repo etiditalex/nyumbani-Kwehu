@@ -99,6 +99,51 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 6,
+            title: "Nyali Beachfront Condo",
+            location: "Nyali Beach",
+            price: "KSh 3,800,000",
+            type: "Condo",
+            status: "For Sale",
+            image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            features: {
+                bedrooms: 2,
+                bathrooms: 2,
+                sqft: "1,200"
+            },
+            description: "Beachfront condo with stunning ocean views"
+        },
+        {
+            id: 7,
+            title: "Kilifi Garden Villa",
+            location: "Kilifi Creek",
+            price: "KSh 5,200,000",
+            type: "Villa",
+            status: "For Sale",
+            image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            features: {
+                bedrooms: 3,
+                bathrooms: 3,
+                sqft: "2,800"
+            },
+            description: "Garden villa with creek views and private pool"
+        },
+        {
+            id: 8,
+            title: "Shanzu Modern Apartment",
+            location: "Shanzu Heights",
+            price: "KSh 1,800,000",
+            type: "Apartment",
+            status: "For Sale",
+            image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            features: {
+                bedrooms: 2,
+                bathrooms: 1,
+                sqft: "1,100"
+            },
+            description: "Modern apartment with city views"
+        },
+        {
+            id: 9,
             title: "Nyali Rental Apartment",
             location: "Nyali",
             price: "KSh 85,000/month",
@@ -111,6 +156,51 @@ document.addEventListener('DOMContentLoaded', function() {
                 sqft: "1,200"
             },
             description: "Furnished apartment for rent"
+        },
+        {
+            id: 10,
+            title: "Kilifi Beach House Rental",
+            location: "Kilifi Beach",
+            price: "KSh 120,000/month",
+            type: "House",
+            status: "For Rent",
+            image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            features: {
+                bedrooms: 3,
+                bathrooms: 2,
+                sqft: "2,000"
+            },
+            description: "Beachfront house for rent with private access"
+        },
+        {
+            id: 11,
+            title: "Shanzu Studio Apartment",
+            location: "Shanzu",
+            price: "KSh 45,000/month",
+            type: "Studio",
+            status: "For Rent",
+            image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            features: {
+                bedrooms: 1,
+                bathrooms: 1,
+                sqft: "600"
+            },
+            description: "Cozy studio apartment in prime location"
+        },
+        {
+            id: 12,
+            title: "Mtwapa Villa Rental",
+            location: "Mtwapa",
+            price: "KSh 180,000/month",
+            type: "Villa",
+            status: "For Rent",
+            image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            features: {
+                bedrooms: 4,
+                bathrooms: 3,
+                sqft: "3,500"
+            },
+            description: "Luxury villa rental with pool and garden"
         }
     ];
 
@@ -378,26 +468,56 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Property Filtering
     function filterProperties() {
-        const locationFilter = document.querySelector('select[value=""]');
-        const priceFilter = document.querySelectorAll('.filter-select')[1];
-        const typeFilter = document.querySelectorAll('.filter-select')[2];
+        const filters = document.querySelectorAll('.filter-select');
+        const locationFilter = filters[0];
+        const priceFilter = filters[1];
+        const typeFilter = filters[2];
         
         let filteredProperties = properties.filter(p => p.status === 'For Sale');
         
+        // Location filter
         if (locationFilter && locationFilter.value) {
             filteredProperties = filteredProperties.filter(p => 
                 p.location.toLowerCase().includes(locationFilter.value.toLowerCase())
             );
         }
         
+        // Price filter with proper range mapping
+        if (priceFilter && priceFilter.value) {
+            const priceRanges = {
+                '50k-500k': { min: 50000, max: 500000 },
+                '500k-2m': { min: 500000, max: 2000000 },
+                '2m-5m': { min: 2000000, max: 5000000 },
+                '5m-10m': { min: 5000000, max: 10000000 }
+            };
+            
+            const range = priceRanges[priceFilter.value];
+            if (range) {
+                filteredProperties = filteredProperties.filter(p => {
+                    const price = parseInt(p.price.replace(/[^\d]/g, ''));
+                    return price >= range.min && price <= range.max;
+                });
+            }
+        }
+        
+        // Type filter
         if (typeFilter && typeFilter.value) {
             filteredProperties = filteredProperties.filter(p => 
                 p.type.toLowerCase() === typeFilter.value.toLowerCase()
             );
         }
         
+        // Update the grid with filtered properties
+        const propertiesGrid = document.getElementById('properties-grid');
         if (propertiesGrid) {
             propertiesGrid.innerHTML = filteredProperties.map(createPropertyCard).join('');
+        }
+        
+        // Update rental properties grid if on rental page
+        const rentalPropertiesGrid = document.getElementById('rental-properties-grid');
+        if (rentalPropertiesGrid) {
+            const rentalProperties = properties.filter(p => p.status === 'For Rent');
+            rentalPropertiesGrid.innerHTML = rentalProperties.map(createPropertyCard).join('');
         }
     }
 
@@ -664,6 +784,14 @@ document.addEventListener('DOMContentLoaded', function() {
     loadProperties();
     console.log('Website initialized successfully!');
 });
+
+// Global function for opening booking modal
+function openBookingModal() {
+    const modal = document.getElementById('booking-modal');
+    if (modal) {
+        modal.style.display = 'block';
+    }
+}
 
 // Fallback: Remove loader if it still exists after 2 seconds
 setTimeout(() => {
