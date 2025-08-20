@@ -51,7 +51,11 @@
                     </ul>
                 </div>
                 
-
+                <div class="nav-buttons">
+                    <a href="#" class="booking-btn" onclick="openBookingModal()">
+                        <i class="fas fa-calendar"></i> Book Viewing
+                    </a>
+                </div>
                 
                 <div class="hamburger" id="hamburger">
                     <span class="bar"></span>
@@ -200,6 +204,43 @@
             </div>
         </div>
     </footer>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Book a Property Viewing</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Your Phone" required>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">Select Property</option>
+                        <option value="property1">Coastal Villa - Nyali</option>
+                        <option value="property2">Kilifi Heights - Kilifi</option>
+                        <option value="property3">Shanzu Gardens - Shanzu</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="date" required>
+                </div>
+                <div class="form-group">
+                    <input type="time" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Additional Notes" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Book Viewing</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Booking Modal -->
     <div id="booking-modal" class="modal">
