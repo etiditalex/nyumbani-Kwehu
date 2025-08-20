@@ -207,7 +207,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 e.preventDefault();
                 const dropdownMenu = link.nextElementSibling;
                 if (dropdownMenu && dropdownMenu.classList.contains('dropdown-menu')) {
+                    // Close all other dropdown menus first
+                    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                        if (menu !== dropdownMenu) {
+                            menu.classList.remove('show');
+                        }
+                    });
+                    // Toggle current dropdown
                     dropdownMenu.classList.toggle('show');
+                    
+                    // Add visual feedback to the link
+                    link.classList.toggle('active');
                 }
             }
         });
