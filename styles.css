@@ -217,18 +217,16 @@ p {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(160, 128, 80, 0.1);
+    background: var(--white);
     z-index: 1000;
     transition: var(--transition);
-    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.header.scrolled {
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: var(--shadow);
-    padding: 10px 0;
+.header-top-border {
+    height: 3px;
+    background: linear-gradient(90deg, #4A5568 0%, #2D3748 100%);
+    width: 100%;
 }
 
 .navbar {
@@ -242,6 +240,7 @@ p {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 30px;
+    height: 80px;
 }
 
 .nav-logo {
@@ -253,27 +252,40 @@ p {
 }
 
 .nav-logo:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
-.logo {
-    width: 60px;
-    height: 60px;
+.logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-circle {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #4A5568 0%, #2D3748 100%);
     border-radius: 50%;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(74, 85, 104, 0.3);
 }
 
-.logo:hover {
-    transform: rotate(5deg);
+.logo-text-small {
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
 }
 
 .logo-text {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--secondary-color);
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #2D3748;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 .nav-menu {
@@ -295,13 +307,14 @@ p {
 }
 
 .nav-link {
-    color: var(--secondary-color);
+    color: #2D3748;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
     padding: 10px 0;
     transition: var(--transition);
     position: relative;
+    letter-spacing: 0.5px;
 }
 
 .nav-link::after {
@@ -311,7 +324,7 @@ p {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--gradient-primary);
+    background: #4A5568;
     transition: var(--transition);
 }
 
@@ -321,7 +334,7 @@ p {
 }
 
 .nav-link:hover {
-    color: var(--primary-color);
+    color: #4A5568;
 }
 
 .dropdown {
@@ -334,13 +347,14 @@ p {
     left: 0;
     background: var(--white);
     border-radius: var(--border-radius);
-    box-shadow: var(--shadow-hover);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     padding: 20px 0;
-    min-width: 200px;
+    min-width: 220px;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
     transition: var(--transition);
+    border: 1px solid rgba(74, 85, 104, 0.1);
 }
 
 .dropdown:hover .dropdown-menu {
@@ -356,20 +370,39 @@ p {
 .dropdown-menu a {
     display: block;
     padding: 12px 25px;
-    color: var(--secondary-color);
+    color: #2D3748;
     text-decoration: none;
     transition: var(--transition);
+    font-weight: 500;
+    font-size: 0.9rem;
 }
 
 .dropdown-menu a:hover {
-    background: var(--light-gray);
-    color: var(--primary-color);
+    background: #F7FAFC;
+    color: #4A5568;
 }
 
 .nav-buttons {
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+.booking-btn {
+    background: linear-gradient(135deg, #4A5568 0%, #2D3748 100%);
+    color: var(--white);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(74, 85, 104, 0.3);
+}
+
+.booking-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 85, 104, 0.4);
 }
 
 .hamburger {
@@ -382,7 +415,7 @@ p {
 .bar {
     width: 25px;
     height: 3px;
-    background: var(--secondary-color);
+    background: #2D3748;
     transition: var(--transition);
     border-radius: 2px;
 }
@@ -1130,6 +1163,47 @@ p {
     color: var(--primary-color);
 }
 
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-logo .logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo .logo-circle {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+.footer-logo .logo-text-small {
+    color: #2D3748;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-logo h3 {
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
 /* Modal */
 .modal {
     display: none;
@@ -1228,16 +1302,26 @@ p {
 @media (max-width: 768px) {
     /* Mobile Header */
     .header {
-        padding: 10px 0;
+        padding: 0;
     }
     
     .nav-container {
         padding: 0 20px;
+        height: 70px;
     }
     
     .nav-logo .logo-text {
-        font-size: 1rem;
-        line-height: 1.2;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+    
+    .logo-circle {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .logo-text-small {
+        font-size: 0.7rem;
     }
     
     .nav-menu {
@@ -1245,14 +1329,13 @@ p {
         left: -100%;
         top: 100%;
         flex-direction: column;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(20px);
+        background: var(--white);
         width: 100%;
         text-align: center;
         transition: var(--transition);
-        box-shadow: var(--shadow-hover);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         padding: 40px 0;
-        border-top: 1px solid rgba(160, 128, 80, 0.1);
+        border-top: 1px solid rgba(74, 85, 104, 0.1);
     }
     
     .nav-menu.active {
