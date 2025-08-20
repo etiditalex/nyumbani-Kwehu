@@ -281,11 +281,12 @@ p {
 }
 
 .logo-text {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: 800;
     color: var(--secondary-color);
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    line-height: 1.2;
 }
 
 .nav-menu {
@@ -1641,11 +1642,12 @@ p {
 
 .footer-logo h3 {
     color: var(--white);
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     margin: 0;
+    line-height: 1.2;
 }
 
 /* Modal */
@@ -1777,8 +1779,8 @@ p {
     }
     
     .nav-logo .logo-text {
-        font-size: 1.1rem;
-        letter-spacing: 1px;
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
     }
     
     .logo-image {
@@ -2081,7 +2083,7 @@ p {
     }
     
     .nav-logo .logo-text {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
     
     .logo-image {
