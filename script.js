@@ -518,19 +518,22 @@ document.addEventListener('DOMContentLoaded', function() {
         const rentalProperties = properties.filter(p => p.status === 'For Rent');
         
         console.log('Loading properties...', { saleProperties: saleProperties.length, rentalProperties: rentalProperties.length });
+        console.log('Current page:', window.location.pathname);
         
         if (propertiesGrid) {
             console.log('Properties grid found, loading sale properties...');
             propertiesGrid.innerHTML = saleProperties.map(createPropertyCard).join('');
+            console.log('Sale properties loaded:', saleProperties.length);
         } else {
-            console.log('Properties grid not found');
+            console.log('Properties grid not found on page:', window.location.pathname);
         }
         
         if (rentalPropertiesGrid) {
             console.log('Rental properties grid found, loading rental properties...');
             rentalPropertiesGrid.innerHTML = rentalProperties.map(createPropertyCard).join('');
+            console.log('Rental properties loaded:', rentalProperties.length);
         } else {
-            console.log('Rental properties grid not found');
+            console.log('Rental properties grid not found on page:', window.location.pathname);
         }
     }
 
@@ -856,6 +859,12 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Fallback: Checking properties again...');
         loadProperties();
     }, 1000);
+    
+    // Additional fallback for mobile devices
+    setTimeout(() => {
+        console.log('Mobile fallback: Final properties check...');
+        loadProperties();
+    }, 2000);
     
     console.log('Website initialized successfully!');
 });
