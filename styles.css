@@ -3452,27 +3452,33 @@ p {
 
 /* Map Section */
 .map-section {
-    padding: 100px 0;
+    padding: 0;
     background: var(--white);
+    margin: 0;
 }
 
 .map-container {
-    width: 100%;
+    width: 100vw;
     margin: 0;
     padding: 0;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
 .map-wrapper {
     position: relative;
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
-    box-shadow: var(--shadow-hover);
+    box-shadow: none;
     border: none;
 }
 
 .map-wrapper iframe {
     display: block;
-    width: 100%;
+    width: 100vw;
     height: 450px;
     border: none;
     margin: 0;
