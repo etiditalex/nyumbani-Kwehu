@@ -2037,7 +2037,7 @@ p {
     .footer-section:nth-child(3) {
         grid-column: span 2 !important;
         text-align: left;
-        margin-top: 20px;
+        margin-top: 10px;
     }
     
     .contact-info p {
@@ -2077,7 +2077,7 @@ p {
     .footer-section:nth-child(3) {
         grid-column: span 2 !important;
         text-align: left;
-        margin-top: 15px;
+        margin-top: 8px;
     }
     
     .footer-section h4 {
