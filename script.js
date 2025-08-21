@@ -876,6 +876,29 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 2000);
     
     console.log('Website initialized successfully!');
+
+    // Scroll to Top Functionality
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    // Show/Hide Scroll to Top Button
+    window.addEventListener('scroll', function() {
+        const scrollToTopBtn = document.querySelector('.scroll-to-top');
+        if (scrollToTopBtn) {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        }
+    });
+
+    // Make scrollToTop function globally available
+    window.scrollToTop = scrollToTop;
 });
 
 // Global function for opening booking modal
