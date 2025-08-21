@@ -432,13 +432,16 @@ p {
 
 /* Page Header */
 body .page-header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%) !important;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://drive.google.com/thumbnail?id=1wwrKolFzczcthFfe3WOgpu1OGW-5nSdT&sz=w1200') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
     padding: 80px 0 60px;
     text-align: center;
     color: var(--white) !important;
     position: relative;
     z-index: 1;
-    background-color: transparent !important;
+    background-color: var(--primary-color) !important;
     margin: 0 !important;
     border: none !important;
     box-shadow: none !important;
@@ -452,7 +455,7 @@ body .page-header h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 800;
     margin-bottom: 20px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
     color: var(--white) !important;
     background: none !important;
     -webkit-background-clip: unset !important;
@@ -468,6 +471,7 @@ body .page-header p {
     background: none !important;
     -webkit-background-clip: unset !important;
     -webkit-text-fill-color: unset !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* Hero Section */
@@ -3107,6 +3111,7 @@ body .page-header p {
 @media (max-width: 768px) {
     .page-header {
         padding: 60px 0;
+        background-attachment: scroll !important;
     }
     
     .page-header-content {
