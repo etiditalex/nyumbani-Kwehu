@@ -2178,6 +2178,27 @@ p {
         justify-content: space-between;
         gap: 0;
     }
+    
+    /* Properties Grid Mobile */
+    .properties-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    
+    .featured-properties .properties-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    
+    /* Services Grid Mobile */
+    .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    
+    .service-card.featured {
+        grid-column: span 1 !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2194,5 +2215,54 @@ p {
         font-size: 0.85rem;
         padding: 12px 0;
     }
+    
+    /* Properties Grid Small Mobile */
+    .properties-grid {
+        gap: 15px !important;
+    }
+    
+    .featured-properties .properties-grid {
+        gap: 15px !important;
+    }
+    
+    /* Services Grid Small Mobile */
+    .services-grid {
+        gap: 15px !important;
+    }
+    
+    /* Property Cards Small Mobile */
+    .property-card {
+        margin-bottom: 20px;
+    }
+    
+    .property-image {
+        height: 220px;
+    }
+    
+    .property-content {
+        padding: 20px;
+    }
+    
+    .property-title {
+        font-size: 1.2rem;
+    }
+    
+    .property-price {
+        font-size: 1.3rem;
+    }
+    
+    /* Service Cards Small Mobile */
+    .service-card {
+        margin-bottom: 20px;
+    }
+    
+    .service-content {
+        padding: 20px;
+    }
+    
+    .service-content h3 {
+        font-size: 1.6rem;
+    }
 }
+
 
