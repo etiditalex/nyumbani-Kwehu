@@ -6,12 +6,12 @@
 }
 
 :root {
-    --primary-color: #a08050;
-    --primary-dark: #8b6b3a;
-    --primary-light: #c4a574;
-    --secondary-color: #2c3e50;
-    --secondary-light: #34495e;
-    --accent-color: #e74c3c;
+    --primary-color: #8B4513;
+    --primary-dark: #654321;
+    --primary-light: #D2691E;
+    --secondary-color: #2F2F2F;
+    --secondary-light: #4A4A4A;
+    --accent-color: #D2691E;
     --white: #ffffff;
     --light-gray: #f8f9fa;
     --lighter-gray: #fafbfc;
@@ -161,12 +161,12 @@ p {
 .btn-primary {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
     color: var(--white);
-    box-shadow: 0 4px 15px rgba(160, 128, 80, 0.3);
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(160, 128, 80, 0.4);
+    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
 }
 
 .btn-secondary {
@@ -339,7 +339,7 @@ p {
     font-weight: 600;
     font-size: 0.9rem;
     transition: var(--transition);
-    box-shadow: 0 4px 15px rgba(160, 128, 80, 0.3);
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
     display: flex;
     align-items: center;
     gap: 8px;
@@ -347,7 +347,7 @@ p {
 
 .booking-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(160, 128, 80, 0.4);
+    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
     color: var(--white);
 }
 
@@ -415,7 +415,7 @@ p {
 .bar {
     width: 25px;
     height: 3px;
-    background: #2D3748;
+    background: var(--primary-color);
     transition: var(--transition);
     border-radius: 2px;
 }
@@ -2083,7 +2083,7 @@ body .page-header p {
 
 /* Footer Styles */
 .footer {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #34495e 100%);
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-light) 100%);
     color: var(--white);
     padding: 80px 0 30px;
     position: relative;
@@ -2109,6 +2109,7 @@ body .page-header p {
     margin-bottom: 50px !important;
     position: relative;
     z-index: 1;
+    text-align: left;
 }
 
 .footer-section {
@@ -2172,7 +2173,7 @@ body .page-header p {
     background: var(--primary-color);
     border-color: var(--primary-color);
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(160, 128, 80, 0.3);
+    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.3);
 }
 
 .footer-section h4 {
@@ -2316,7 +2317,7 @@ body .page-header p {
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
-    box-shadow: 0 4px 15px rgba(160, 128, 80, 0.3);
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
 }
 
 .scroll-to-top.show {
@@ -2326,7 +2327,7 @@ body .page-header p {
 
 .scroll-to-top:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(160, 128, 80, 0.4);
+    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
 }
 
 /* Mobile Footer Responsiveness */
@@ -2338,24 +2339,24 @@ body .page-header p {
     .footer-content {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 30px !important;
-        text-align: center;
+        text-align: left;
     }
     
     .footer-section:nth-child(1) {
         grid-column: span 2 !important;
-        text-align: center;
+        text-align: left;
         margin-bottom: 20px;
     }
     
     .footer-section:nth-child(2),
     .footer-section:nth-child(3) {
         grid-column: span 1 !important;
-        text-align: center;
+        text-align: left;
     }
     
     .footer-section:nth-child(4) {
         grid-column: span 2 !important;
-        text-align: center;
+        text-align: left;
         margin-top: 10px;
     }
     
@@ -2364,12 +2365,12 @@ body .page-header p {
     }
     
     .social-links {
-        justify-content: center;
+        justify-content: flex-start;
     }
     
     .footer-bottom {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
         gap: 15px;
     }
     
@@ -2392,19 +2393,19 @@ body .page-header p {
     
     .footer-section:nth-child(1) {
         grid-column: span 2 !important;
-        text-align: center;
+        text-align: left;
         margin-bottom: 15px;
     }
     
     .footer-section:nth-child(2),
     .footer-section:nth-child(3) {
         grid-column: span 1 !important;
-        text-align: center;
+        text-align: left;
     }
     
     .footer-section:nth-child(4) {
         grid-column: span 2 !important;
-        text-align: center;
+        text-align: left;
         margin-top: 10px;
     }
     
