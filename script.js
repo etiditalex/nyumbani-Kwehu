@@ -993,6 +993,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Final fallback: Ensuring properties are visible...');
         const propertiesGrid = document.getElementById('properties-grid');
         const rentalPropertiesGrid = document.getElementById('rental-properties-grid');
+        const featuredPropertiesGrid = document.getElementById('featured-properties-grid');
         
         if (propertiesGrid && propertiesGrid.children.length === 0) {
             console.log('Properties grid is empty, forcing reload...');
@@ -1003,7 +1004,20 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Rental properties grid is empty, forcing reload...');
             loadProperties();
         }
+        
+        if (featuredPropertiesGrid && featuredPropertiesGrid.children.length === 0) {
+            console.log('Featured properties grid is empty, forcing reload...');
+            loadProperties();
+        }
     }, 3000);
+    
+    // Mobile-specific property loading
+    if (window.innerWidth <= 768) {
+        setTimeout(() => {
+            console.log('Mobile-specific property loading...');
+            loadProperties();
+        }, 1000);
+    }
     
     console.log('Website initialized successfully!');
 
