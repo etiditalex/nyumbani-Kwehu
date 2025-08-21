@@ -3457,42 +3457,79 @@ p {
 }
 
 .map-container {
-    max-width: 600px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.map-placeholder {
-    background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
-    border-radius: var(--border-radius-lg);
-    padding: 60px 40px;
-    text-align: center;
+.map-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: var(--shadow-hover);
+    border: none;
+}
+
+.map-wrapper iframe {
+    display: block;
+    width: 100%;
+    height: 450px;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.map-info {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    padding: 20px;
     box-shadow: var(--shadow);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    max-width: 300px;
 }
 
-.map-placeholder i {
-    font-size: 4rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
+.map-info-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
 }
 
-.map-placeholder h3 {
+.map-info-content i {
     font-size: 2rem;
+    color: var(--primary-color);
+    margin-top: 5px;
+}
+
+.map-info-content h3 {
+    font-size: 1.2rem;
     font-weight: 600;
     color: var(--secondary-color);
-    margin-bottom: 15px;
+    margin-bottom: 8px;
+    line-height: 1.3;
 }
 
-.map-placeholder p {
-    font-size: 1.1rem;
+.map-info-content p {
+    font-size: 0.95rem;
     color: var(--text-color);
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    line-height: 1.4;
 }
 
-.map-placeholder .btn {
-    padding: 14px 30px;
-    font-size: 1rem;
+.map-info-content .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
     font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 /* Contact Graphic */
@@ -3555,16 +3592,30 @@ p {
         gap: 0;
     }
     
-    .map-placeholder {
-        padding: 40px 20px;
+    .map-wrapper {
+        margin: 0;
     }
     
-    .map-placeholder i {
-        font-size: 3rem;
+    .map-wrapper iframe {
+        height: 350px;
     }
     
-    .map-placeholder h3 {
-        font-size: 1.5rem;
+    .map-overlay {
+        top: 15px;
+        left: 15px;
+    }
+    
+    .map-info {
+        padding: 15px;
+        max-width: 250px;
+    }
+    
+    .map-info-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .map-info-content p {
+        font-size: 0.9rem;
     }
     
     .contact-graphic {
@@ -3598,16 +3649,39 @@ p {
         padding: 25px 15px;
     }
     
-    .map-placeholder {
-        padding: 30px 15px;
+    .map-wrapper iframe {
+        height: 300px;
     }
     
-    .map-placeholder i {
-        font-size: 2.5rem;
+    .map-overlay {
+        top: 10px;
+        left: 10px;
     }
     
-    .map-placeholder h3 {
-        font-size: 1.3rem;
+    .map-info {
+        padding: 12px;
+        max-width: 200px;
+    }
+    
+    .map-info-content {
+        gap: 10px;
+    }
+    
+    .map-info-content i {
+        font-size: 1.5rem;
+    }
+    
+    .map-info-content h3 {
+        font-size: 1rem;
+    }
+    
+    .map-info-content p {
+        font-size: 0.85rem;
+    }
+    
+    .map-info-content .btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
     }
     
     .contact-graphic {
