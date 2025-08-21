@@ -971,6 +971,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize everything
     console.log('Loading properties...');
     loadProperties();
+    setActiveNavigation();
     
     // Fallback: Ensure properties are loaded after a short delay
     setTimeout(() => {
