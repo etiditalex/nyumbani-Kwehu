@@ -699,30 +699,31 @@ body .page-header p {
 
 .featured-properties .properties-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 40px;
     margin-top: 40px;
 }
 
-/* Featured Properties - Vertical Card Design for Homepage */
+/* Featured Properties - Horizontal Card Design (same as for-sale/for-rent) */
 .featured-properties .property-card {
+    display: flex;
     background: var(--white);
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
     border: 1px solid rgba(0, 0, 0, 0.05);
-    position: relative;
+    min-height: 280px;
 }
 
 .featured-properties .property-card:hover {
     box-shadow: var(--shadow-hover);
-    transform: translateY(-8px);
+    transform: translateY(-4px);
 }
 
 .featured-properties .property-image {
+    flex: 0 0 400px;
     position: relative;
-    height: 250px;
     overflow: hidden;
 }
 
@@ -734,7 +735,7 @@ body .page-header p {
 }
 
 .featured-properties .property-card:hover .property-image img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .featured-properties .property-status {
@@ -753,11 +754,15 @@ body .page-header p {
 }
 
 .featured-properties .property-content {
-    padding: 25px;
+    flex: 1;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .featured-properties .property-header h3 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: var(--secondary-color);
     margin-bottom: 10px;
@@ -773,11 +778,21 @@ body .page-header p {
     margin-bottom: 15px;
 }
 
+.featured-properties .property-description {
+    margin-bottom: 20px;
+}
+
+.featured-properties .property-description p {
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
 .featured-properties .property-price {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     font-weight: 800;
     color: var(--secondary-color);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     line-height: 1.1;
 }
 
@@ -788,8 +803,8 @@ body .page-header p {
 }
 
 .featured-properties .property-actions .btn {
-    padding: 10px 16px;
-    font-size: 0.85rem;
+    padding: 12px 20px;
+    font-size: 0.9rem;
 }
 
 /* Enhanced Services Showcase Section */
@@ -3573,28 +3588,35 @@ body .page-header p {
     }
     
     .featured-properties .property-card {
+        flex-direction: column;
         min-height: auto;
     }
     
     .featured-properties .property-image {
-        height: 200px;
+        flex: none;
+        height: 250px;
     }
     
     .featured-properties .property-content {
-        padding: 20px;
+        padding: 30px;
     }
     
     .featured-properties .property-header h3 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
     
     .featured-properties .property-price {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
+        text-align: left;
         margin-bottom: 15px;
     }
     
     .featured-properties .property-actions {
         flex-direction: column;
+    }
+    
+    .featured-properties .property-description {
+        margin-bottom: 15px;
     }
     
     .properties-content-section .section-header h2 {
@@ -3650,15 +3672,15 @@ body .page-header p {
     }
     
     .featured-properties .property-content {
-        padding: 15px;
+        padding: 20px;
     }
     
     .featured-properties .property-header h3 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
     
     .featured-properties .property-price {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
     
     .property-content {
