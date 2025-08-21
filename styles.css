@@ -408,6 +408,8 @@ p {
     flex-direction: column;
     cursor: pointer;
     gap: 6px;
+    padding: 8px;
+    margin-left: auto;
 }
 
 .bar {
@@ -539,6 +541,34 @@ body .page-header p {
     padding: 0 30px;
     margin-top: 40px;
     animation: fadeInUp 1s ease-out;
+}
+
+/* Mobile Responsive Hero Section */
+@media (max-width: 768px) {
+    .carousel-content {
+        margin-top: 100px;
+        padding: 0 20px;
+    }
+    
+    .carousel-content h1 {
+        font-size: clamp(2rem, 4vw, 2.5rem);
+        margin-bottom: 20px;
+    }
+    
+    .carousel-content p {
+        font-size: clamp(1rem, 3vw, 1.1rem);
+        margin-bottom: 25px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
 .carousel-content h1 {
@@ -2307,7 +2337,7 @@ body .page-header p {
     
     .footer-content {
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 40px !important;
+        gap: 30px !important;
         text-align: center;
     }
     
@@ -2319,12 +2349,13 @@ body .page-header p {
     
     .footer-section:nth-child(2),
     .footer-section:nth-child(3) {
+        grid-column: span 1 !important;
         text-align: center;
     }
     
     .footer-section:nth-child(4) {
         grid-column: span 2 !important;
-        text-align: left;
+        text-align: center;
         margin-top: 10px;
     }
     
@@ -2507,6 +2538,8 @@ body .page-header p {
     .nav-container {
         justify-content: space-between;
         gap: 0;
+        padding: 0 20px;
+        height: 70px;
     }
     
     /* Properties Grid Mobile */
@@ -3120,7 +3153,7 @@ body .page-header p {
 /* Mobile Responsive News Page */
 @media (max-width: 768px) {
     .page-header {
-        padding: 60px 0;
+        padding: 80px 0 40px;
         background-attachment: scroll !important;
     }
     
