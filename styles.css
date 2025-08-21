@@ -433,7 +433,7 @@ p {
 /* Page Header */
 .page-header {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-    padding: 120px 0 80px;
+    padding: 80px 0 60px;
     text-align: center;
     color: var(--white);
 }
@@ -515,7 +515,7 @@ p {
     color: var(--white);
     max-width: 800px;
     padding: 0 30px;
-    margin-top: 60px;
+    margin-top: 40px;
     animation: fadeInUp 1s ease-out;
 }
 
@@ -646,13 +646,13 @@ p {
 
 /* Properties Section */
 .properties-section {
-    padding: 120px 0;
+    padding: 80px 0;
     background: var(--white);
 }
 
 /* Featured Properties Section */
 .featured-properties {
-    padding: 100px 0;
+    padding: 80px 0;
     background: var(--white);
 }
 
@@ -684,7 +684,7 @@ p {
 
 /* Enhanced Services Showcase Section */
 .services-showcase {
-    padding: 120px 0;
+    padding: 80px 0;
     background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
     position: relative;
 }
@@ -866,7 +866,7 @@ p {
 
 /* About Showcase Section */
 .about-showcase {
-    padding: 120px 0;
+    padding: 80px 0;
     background: var(--white);
 }
 
@@ -1189,7 +1189,7 @@ p {
 
 /* Developments Section */
 .developments-section {
-    padding: 120px 0;
+    padding: 80px 0;
     background: var(--white);
 }
 
@@ -1260,7 +1260,7 @@ p {
 
 /* Virtual Tour Section */
 .virtual-tour-section {
-    padding: 100px 0;
+    padding: 80px 0;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: var(--white);
 }
@@ -2852,7 +2852,7 @@ p {
 
 /* News Content Section */
 .news-content-section {
-    padding: 100px 0;
+    padding: 80px 0;
     background: var(--white);
 }
 
@@ -2860,7 +2860,7 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 40px;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .news-card {
@@ -3077,7 +3077,7 @@ p {
 
 /* About Content Section */
 .about-content-section {
-    padding: 100px 0;
+    padding: 80px 0;
     background: var(--white);
 }
 
@@ -3085,7 +3085,7 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 40px;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .about-card {
@@ -3262,7 +3262,7 @@ p {
 
 /* Properties Content Section */
 .properties-content-section {
-    padding: 120px 0;
+    padding: 80px 0;
     background: var(--white);
     position: relative;
 }
@@ -3314,7 +3314,7 @@ p {
     display: grid;
     grid-template-columns: 1fr;
     gap: 40px;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .property-card {
@@ -3528,7 +3528,7 @@ p {
 
 /* Contact Content Section */
 .contact-content-section {
-    padding: 120px 0;
+    padding: 80px 0;
     background: var(--white);
     position: relative;
 }
@@ -3537,7 +3537,7 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 40px;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .contact-card {
@@ -3672,7 +3672,7 @@ p {
 
 /* Contact Form Section */
 .contact-form-section {
-    padding: 100px 0;
+    padding: 80px 0;
     background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
 }
 
