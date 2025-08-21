@@ -432,7 +432,7 @@ p {
 
 /* Page Header */
 body .page-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://drive.google.com/thumbnail?id=1wwrKolFzczcthFfe3WOgpu1OGW-5nSdT&sz=w1200') !important;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -3596,7 +3596,6 @@ body .page-header p {
     .featured-properties .property-actions {
         flex-direction: column;
     }
-}
     
     .properties-content-section .section-header h2 {
         font-size: 2rem;
