@@ -577,6 +577,50 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
     }
 
+    // Create Vertical Property Card for Homepage
+    function createVerticalPropertyCard(property) {
+        const features = property.features;
+        
+        // Determine status badge text and style
+        let statusText = property.status;
+        if (property.status === 'For Sale') {
+            statusText = 'Available Now';
+        } else if (property.status === 'For Rent') {
+            statusText = 'Available Now';
+        }
+        
+        // Create property title with bedroom count
+        const bedroomCount = features.bedrooms ? `${features.bedrooms} Bedroom` : '';
+        const propertyTitle = `${property.title.toUpperCase()} | ${bedroomCount}`;
+    
+        return `
+            <div class="property-card" data-id="${property.id}">
+                <div class="property-image">
+                    <img src="${property.image}" alt="${property.title}" onerror="this.src='https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    <div class="property-status">${statusText}</div>
+                </div>
+                <div class="property-content">
+                    <div class="property-header">
+                        <h3>${propertyTitle}</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            ${property.location}, Kenya
+                        </div>
+                    </div>
+                    <div class="property-price">${property.price}</div>
+                    <div class="property-actions">
+                        <a href="#" class="btn btn-primary" onclick="viewProperty(${property.id})">
+                            <i class="fas fa-phone"></i> Contact Us
+                        </a>
+                        <a href="#" class="btn btn-outline" onclick="bookViewing(${property.id})">
+                            More Information
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
     // Load Properties
     function loadProperties() {
         const saleProperties = properties.filter(p => p.status === 'For Sale');
@@ -590,7 +634,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (featuredPropertiesGrid) {
             console.log('Featured properties grid found, loading 3 properties...');
             const featuredProperties = saleProperties.slice(0, 3);
-            featuredPropertiesGrid.innerHTML = featuredProperties.map(createPropertyCard).join('');
+            featuredPropertiesGrid.innerHTML = featuredProperties.map(createVerticalPropertyCard).join('');
             console.log('Featured properties loaded:', featuredProperties.length);
         }
         
