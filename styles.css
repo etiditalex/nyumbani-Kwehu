@@ -3335,14 +3335,15 @@ p {
     position: absolute;
     top: 20px;
     left: 20px;
-    background: #FFD700;
-    color: #000;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--white);
     padding: 8px 16px;
     border-radius: 6px;
     font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(160, 128, 80, 0.3);
 }
 
 .property-content {
