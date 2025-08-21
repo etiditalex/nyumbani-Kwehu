@@ -2024,13 +2024,20 @@ p {
     }
     
     .footer-content {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: repeat(2, 1fr) !important;
         gap: 40px !important;
         text-align: center;
     }
     
+    .footer-section:nth-child(1),
+    .footer-section:nth-child(2) {
+        text-align: center;
+    }
+    
     .footer-section:nth-child(3) {
+        grid-column: span 2 !important;
         text-align: left;
+        margin-top: 20px;
     }
     
     .contact-info p {
@@ -2058,7 +2065,19 @@ p {
     }
     
     .footer-content {
-        gap: 30px !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+    
+    .footer-section:nth-child(1),
+    .footer-section:nth-child(2) {
+        text-align: center;
+    }
+    
+    .footer-section:nth-child(3) {
+        grid-column: span 2 !important;
+        text-align: left;
+        margin-top: 15px;
     }
     
     .footer-section h4 {
