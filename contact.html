@@ -6,7 +6,7 @@
     <title>Contact Us - Nyumbani Kwehu Developers</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
@@ -66,59 +66,170 @@
         </nav>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
+    <!-- Breadcrumb Navigation -->
+    <section class="breadcrumb-section">
         <div class="container">
-            <h1>Get In Touch</h1>
-            <p>Ready to find your dream property? Contact us today!</p>
+            <nav class="breadcrumb-nav">
+                <a href="index.html" class="breadcrumb-link">
+                    <i class="fas fa-home"></i>
+                </a>
+                <span class="breadcrumb-separator">></span>
+                <span class="breadcrumb-current">Contact Us</span>
+            </nav>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
+    <!-- Page Header -->
+    <section class="page-header">
         <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
+            <div class="page-header-content">
+                <div class="page-header-text">
+                    <h1>Contact Us</h1>
+                    <p>Ready to find your dream property? Get in touch with us today!</p>
+                </div>
+                <div class="page-header-graphic">
+                    <div class="contact-graphic">
                         <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+254 713 861916</p>
-                        </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>info@nyumbandevelopers.com</p>
-                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Content Section -->
+    <section class="contact-content-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card featured">
+                    <div class="contact-image">
+                        <img src="https://drive.google.com/thumbnail?id=1TZIzuEPs2GbvvBxY62DMLO3OaNDLZV_Y&sz=w600" alt="Contact Us">
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Office</h4>
-                            <p>Coast Road, Kilifi</p>
-                            <p>Kenya</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Working Hours</h4>
-                            <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                            <p>Saturday: 9:00 AM - 4:00 PM</p>
+                    <div class="contact-content">
+                        <h3>Get In Touch</h3>
+                        <p>We're here to help you find your perfect coastal property. Whether you're looking to buy, rent, or invest, our team of experts is ready to assist you every step of the way.</p>
+                        <div class="contact-actions">
+                            <a href="#contact-form" class="btn btn-primary">
+                                <i class="fas fa-envelope"></i> Send Message
+                            </a>
+                            <a href="https://wa.me/254713861916?text=Hello! I'd like to get in touch with you. Can you help me?" class="btn btn-outline" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
                         </div>
                     </div>
                 </div>
-                
-                <div class="contact-form">
-                    <form id="contact-form">
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h3>Phone</h3>
+                        <p>Call us directly for immediate assistance</p>
+                        <div class="contact-details">
+                            <span><i class="fas fa-phone"></i> +254 713 861916</span>
+                        </div>
+                        <div class="contact-actions">
+                            <a href="tel:+254713861916" class="btn btn-primary">
+                                <i class="fas fa-phone"></i> Call Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h3>Email</h3>
+                        <p>Send us an email and we'll respond within 24 hours</p>
+                        <div class="contact-details">
+                            <span><i class="fas fa-envelope"></i> info@nyumbandevelopers.com</span>
+                        </div>
+                        <div class="contact-actions">
+                            <a href="mailto:info@nyumbandevelopers.com" class="btn btn-primary">
+                                <i class="fas fa-envelope"></i> Send Email
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h3>Office Location</h3>
+                        <p>Visit our office for a personal consultation</p>
+                        <div class="contact-details">
+                            <span><i class="fas fa-map-marker-alt"></i> Coast Road, Kilifi, Kenya</span>
+                        </div>
+                        <div class="contact-actions">
+                            <a href="https://maps.app.goo.gl/XUUMfGBLk4LQP2dSA" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-map-marker-alt"></i> Get Directions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h3>Working Hours</h3>
+                        <p>We're available during these hours</p>
+                        <div class="contact-details">
+                            <span><i class="fas fa-clock"></i> Monday - Friday: 8:00 AM - 6:00 PM</span>
+                            <span><i class="fas fa-clock"></i> Saturday: 9:00 AM - 4:00 PM</span>
+                        </div>
+                        <div class="contact-actions">
+                            <a href="#contact-form" class="btn btn-primary">
+                                <i class="fas fa-calendar"></i> Schedule Meeting
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h3>Live Chat</h3>
+                        <p>Chat with us in real-time for instant support</p>
+                        <div class="contact-details">
+                            <span><i class="fas fa-comments"></i> Available during business hours</span>
+                        </div>
+                        <div class="contact-actions">
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-comments"></i> Start Chat
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section" id="contact-form">
+        <div class="container">
+            <div class="section-header">
+                <h2>Send Us a Message</h2>
+                <p>Fill out the form below and we'll get back to you as soon as possible</p>
+            </div>
+            <div class="contact-form-container">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-row">
                         <div class="form-group">
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
                             <input type="email" id="email" name="email" placeholder="Your Email" required>
                         </div>
+                    </div>
+                    <div class="form-row">
                         <div class="form-group">
                             <input type="tel" id="phone" name="phone" placeholder="Your Phone">
                         </div>
@@ -131,12 +242,14 @@
                                 <option value="invest">Investment Opportunities</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="5"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-                    </form>
-                </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
             </div>
         </div>
     </section>
@@ -148,11 +261,15 @@
                 <h2>Find Us</h2>
                 <p>Visit our office or get directions</p>
             </div>
-            <div class="map-placeholder">
-                <i class="fas fa-map-marked-alt"></i>
-                <h3>Interactive Map</h3>
-                <p>Coast Road, Kilifi, Kenya</p>
-                <button class="btn btn-primary">Get Directions</button>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Interactive Map</h3>
+                    <p>Coast Road, Kilifi, Kenya</p>
+                    <a href="https://maps.app.goo.gl/XUUMfGBLk4LQP2dSA" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-map-marker-alt"></i> Get Directions
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -168,12 +285,14 @@
                         </div>
                         <h3>NYUMBANI KWEHU DEVELOPERS</h3>
                     </div>
-                    <p>Your trusted partner in finding your dream property in the idyllic coastal region of Kilifi.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
                         <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-phone"></i></a>
                     </div>
                 </div>
                 
@@ -208,24 +327,21 @@
                         <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/XUUMfGBLk4LQP2dSA" target="_blank" style="color: inherit; text-decoration: none;">Coast Road, Kilifi, Kenya</a></p>
                         <p><i class="fas fa-envelope"></i> info@nyumbandevelopers.com</p>
                     </div>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fas fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-phone"></i></a>
-                    </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Nyumbani Kwehu Developers. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Cookie Policy</a>
-                </div>
+                <p>&copy; 2025 Nyumbani Kwehu Developers. All rights reserved.</p>
+                <a href="https://wa.me/254713861916?text=Hello! I'm interested in your coastal properties. Can you help me?" class="whatsapp-enquire-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Enquire Now!
+                </a>
             </div>
         </div>
+        
+        <!-- Scroll to Top Button -->
+        <button class="scroll-to-top" onclick="scrollToTop()">
+            <i class="fas fa-arrow-up"></i>
+        </button>
     </footer>
 
     <!-- Booking Modal -->
@@ -265,49 +381,12 @@
         </div>
     </div>
 
-    <!-- Booking Modal -->
-    <div id="booking-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Book a Property Viewing</h2>
-            <form id="booking-form">
-                <div class="form-group">
-                    <input type="text" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" placeholder="Your Phone" required>
-                </div>
-                <div class="form-group">
-                    <select required>
-                        <option value="">Select Property</option>
-                        <option value="property1">Coastal Villa - Nyali</option>
-                        <option value="property2">Kilifi Heights - Kilifi</option>
-                        <option value="property3">Shanzu Gardens - Shanzu</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <input type="date" required>
-                </div>
-                <div class="form-group">
-                    <input type="time" required>
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="Additional Notes" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-full">Book Viewing</button>
-            </form>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-    
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/254713861916?text=Hello! I'd like to get in touch with you. Can you help me?" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <script src="script.js"></script>
 </body>
 </html>
 
