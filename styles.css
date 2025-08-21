@@ -704,26 +704,25 @@ body .page-header p {
     margin-top: 40px;
 }
 
-/* Featured Properties - Horizontal Card Design */
+/* Featured Properties - Vertical Card Design for Homepage */
 .featured-properties .property-card {
-    display: flex;
     background: var(--white);
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
     border: 1px solid rgba(0, 0, 0, 0.05);
-    min-height: 280px;
+    position: relative;
 }
 
 .featured-properties .property-card:hover {
     box-shadow: var(--shadow-hover);
-    transform: translateY(-4px);
+    transform: translateY(-8px);
 }
 
 .featured-properties .property-image {
-    flex: 0 0 300px;
     position: relative;
+    height: 250px;
     overflow: hidden;
 }
 
@@ -735,7 +734,7 @@ body .page-header p {
 }
 
 .featured-properties .property-card:hover .property-image img {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .featured-properties .property-status {
@@ -754,11 +753,7 @@ body .page-header p {
 }
 
 .featured-properties .property-content {
-    flex: 1;
     padding: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .featured-properties .property-header h3 {
@@ -3578,13 +3573,11 @@ body .page-header p {
     }
     
     .featured-properties .property-card {
-        flex-direction: column;
         min-height: auto;
     }
     
     .featured-properties .property-image {
-        flex: none;
-        height: 250px;
+        height: 200px;
     }
     
     .featured-properties .property-content {
