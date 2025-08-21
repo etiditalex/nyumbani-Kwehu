@@ -577,8 +577,8 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
     }
 
-    // Create Vertical Property Card for Homepage
-    function createVerticalPropertyCard(property) {
+    // Create Horizontal Property Card for Homepage (same as for-sale/for-rent)
+    function createHorizontalPropertyCard(property) {
         const features = property.features;
         
         // Determine status badge text and style
@@ -607,6 +607,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             ${property.location}, Kenya
                         </div>
                     </div>
+                    <div class="property-description">
+                        <p>${property.description}</p>
+                    </div>
                     <div class="property-price">${property.price}</div>
                     <div class="property-actions">
                         <a href="#" class="btn btn-primary" onclick="viewProperty(${property.id})">
@@ -634,7 +637,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (featuredPropertiesGrid) {
             console.log('Featured properties grid found, loading 3 properties...');
             const featuredProperties = saleProperties.slice(0, 3);
-            featuredPropertiesGrid.innerHTML = featuredProperties.map(createVerticalPropertyCard).join('');
+            featuredPropertiesGrid.innerHTML = featuredProperties.map(createHorizontalPropertyCard).join('');
             console.log('Featured properties loaded:', featuredProperties.length);
         }
         
@@ -1051,13 +1054,20 @@ function setActiveNavigation() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('.nav-link');
     
+    console.log('Current page:', currentPage);
+    
     navLinks.forEach(link => {
         link.classList.remove('active');
         const href = link.getAttribute('href');
         
-        if (href === currentPage || 
-            (currentPage === 'index.html' && href === 'index.html') ||
-            (currentPage === '' && href === 'index.html')) {
+        console.log('Checking link:', href, 'against current page:', currentPage);
+        
+        // Handle different page scenarios
+        if (currentPage === '' || currentPage === 'index.html') {
+            if (href === 'index.html' || href === '#home') {
+                link.classList.add('active');
+            }
+        } else if (href === currentPage) {
             link.classList.add('active');
         }
     });
