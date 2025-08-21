@@ -652,6 +652,38 @@ p {
     background: var(--white);
 }
 
+/* Featured Properties Section */
+.featured-properties {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.featured-properties .section-header {
+    margin-bottom: 60px;
+}
+
+.featured-properties .section-header h2 {
+    font-size: 2.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.featured-properties .section-header p {
+    font-size: 1.2rem;
+    color: var(--gray);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.featured-properties .properties-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
 /* Services Showcase Section */
 .services-showcase {
     padding: 120px 0;
@@ -2026,7 +2058,7 @@ p {
     
     .footer-section:nth-child(3) {
         grid-column: span 2;
-        text-align: center;
+        text-align: left;
         margin-top: 10px;
     }
     
@@ -2056,11 +2088,12 @@ p {
     .contact-info p {
         font-size: 0.85rem;
         justify-content: flex-start;
+        margin-bottom: 8px;
     }
     
     .social-links {
-        justify-content: center;
-        margin-top: 15px;
+        justify-content: flex-start;
+        margin-top: 12px;
     }
     
     .footer-bottom {
@@ -2341,6 +2374,25 @@ p {
         padding: 18px 25px;
     }
     
+    /* Mobile Featured Properties */
+    .featured-properties {
+        padding: 60px 0;
+    }
+    
+    .featured-properties .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .featured-properties .section-header p {
+        font-size: 1rem;
+    }
+    
+    .featured-properties .properties-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 40px;
+    }
+    
     /* Mobile Services Grid */
     .services-showcase {
         padding: 60px 0;
@@ -2381,6 +2433,19 @@ p {
     
     /* Extra Small Mobile Devices */
     @media (max-width: 480px) {
+        .featured-properties {
+            padding: 40px 0;
+        }
+        
+        .featured-properties .section-header h2 {
+            font-size: 1.8rem;
+        }
+        
+        .featured-properties .properties-grid {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        
         .services-grid {
             grid-template-columns: 1fr;
             gap: 12px;
