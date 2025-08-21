@@ -698,14 +698,24 @@ p {
     background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+/* Services Carousel */
+.services-carousel-container {
+    position: relative;
     margin-top: 80px;
+    overflow: hidden;
+}
+
+.services-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 30px;
+    padding: 0 20px;
 }
 
 .service-card {
+    min-width: 350px;
+    max-width: 400px;
+    flex-shrink: 0;
     background: var(--white);
     border-radius: 12px;
     overflow: hidden;
@@ -720,9 +730,10 @@ p {
 }
 
 .service-card.featured {
-    grid-column: span 2;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
     color: var(--white);
+    min-width: 400px;
+    max-width: 450px;
 }
 
 .service-card.featured .service-content h3,
@@ -2501,6 +2512,166 @@ p {
     
     .stat p {
         font-size: 0.8rem;
+    }
+}
+
+/* Carousel Navigation Buttons */
+.carousel-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: var(--white);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.carousel-nav-btn:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+/* Services Carousel Indicators */
+.services-carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 40px;
+}
+
+.services-carousel-indicators .indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(160, 128, 80, 0.3);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.services-carousel-indicators .indicator.active {
+    background: var(--primary-color);
+    transform: scale(1.2);
+}
+
+.services-carousel-indicators .indicator:hover {
+    background: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Mobile Responsive Services Carousel */
+@media (max-width: 768px) {
+    .services-carousel {
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .service-card {
+        min-width: 280px;
+        max-width: 320px;
+    }
+    
+    .service-card.featured {
+        min-width: 300px;
+        max-width: 340px;
+    }
+    
+    .carousel-nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .prev-btn {
+        left: 10px;
+    }
+    
+    .next-btn {
+        right: 10px;
+    }
+    
+    .services-carousel-indicators {
+        margin-top: 30px;
+        gap: 10px;
+    }
+    
+    .services-carousel-indicators .indicator {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-carousel {
+        gap: 15px;
+        padding: 0 10px;
+    }
+    
+    .service-card {
+        min-width: 250px;
+        max-width: 280px;
+    }
+    
+    .service-card.featured {
+        min-width: 260px;
+        max-width: 290px;
+    }
+    
+    .service-content {
+        padding: 20px;
+    }
+    
+    .service-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .service-content p {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+    
+    .carousel-nav-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+    
+    .prev-btn {
+        left: 5px;
+    }
+    
+    .next-btn {
+        right: 5px;
+    }
+    
+    .services-carousel-indicators {
+        margin-top: 25px;
+        gap: 8px;
+    }
+    
+    .services-carousel-indicators .indicator {
+        width: 8px;
+        height: 8px;
     }
 }
 
