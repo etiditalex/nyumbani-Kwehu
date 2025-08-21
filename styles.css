@@ -1899,7 +1899,7 @@ p {
 }
 
 .footer-section {
-    padding: 20px;
+    padding: 15px;
     /* Ensure proper grid behavior */
     min-width: 0;
     overflow: hidden;
@@ -1909,27 +1909,28 @@ p {
 }
 
 .footer-logo {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .footer-logo .logo-icon {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .footer-logo .logo-image {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
 }
 
 .footer-logo h3 {
     color: var(--white);
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-weight: 600;
     margin: 0;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
 }
 
 .footer-section h4 {
@@ -1985,23 +1986,24 @@ p {
 
 .social-links {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     flex-wrap: wrap;
+    margin-top: 15px;
 }
 
 .social-links a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 35px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
     background: transparent;
     color: var(--white);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     text-decoration: none;
     transition: var(--transition);
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .social-links a:hover {
@@ -2168,12 +2170,22 @@ p {
     
     .social-links {
         margin-top: 15px;
+        justify-content: center;
     }
     
     .social-links a {
-        width: 30px;
-        height: 30px;
-        font-size: 0.9rem;
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+    
+    .footer-logo h3 {
+        font-size: 0.8rem;
+    }
+    
+    .footer-logo .logo-image {
+        width: 45px;
+        height: 45px;
     }
     
     .whatsapp-enquire-btn {
