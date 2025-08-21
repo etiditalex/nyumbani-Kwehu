@@ -20,6 +20,61 @@ document.addEventListener('DOMContentLoaded', function() {
     const indicators = document.querySelectorAll('.indicator');
     let currentSlide = 0;
 
+    // Services Carousel Functionality
+    let currentServicesSlide = 0;
+    const servicesCarousel = document.querySelector('.services-carousel');
+    const serviceCards = document.querySelectorAll('.service-card');
+    const servicesIndicators = document.querySelectorAll('.services-carousel-indicators .indicator');
+
+    function moveServicesCarousel(direction) {
+        const totalSlides = serviceCards.length;
+        currentServicesSlide += direction;
+        
+        if (currentServicesSlide >= totalSlides) {
+            currentServicesSlide = 0;
+        } else if (currentServicesSlide < 0) {
+            currentServicesSlide = totalSlides - 1;
+        }
+        
+        updateServicesCarousel();
+    }
+
+    function goToServicesSlide(slideIndex) {
+        currentServicesSlide = slideIndex;
+        updateServicesCarousel();
+    }
+
+    function updateServicesCarousel() {
+        if (!servicesCarousel) return;
+        
+        const cardWidth = serviceCards[0].offsetWidth + 30; // Including gap
+        const translateX = -currentServicesSlide * cardWidth;
+        
+        servicesCarousel.style.transform = `translateX(${translateX}px)`;
+        
+        // Update indicators
+        servicesIndicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === currentServicesSlide);
+        });
+    }
+
+    // Auto-play services carousel
+    function autoPlayServicesCarousel() {
+        setInterval(() => {
+            moveServicesCarousel(1);
+        }, 5000); // Change slide every 5 seconds
+    }
+
+    // Initialize services carousel
+    if (servicesCarousel && serviceCards.length > 0) {
+        updateServicesCarousel();
+        autoPlayServicesCarousel();
+    }
+    
+    // Make functions globally available
+    window.moveServicesCarousel = moveServicesCarousel;
+    window.goToServicesSlide = goToServicesSlide;
+
     // Sample Properties Data
     const properties = [
         {
