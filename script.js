@@ -537,30 +537,40 @@ document.addEventListener('DOMContentLoaded', function() {
             featureItems.push(`<span class="property-feature"><i class="fas fa-car"></i> ${features.parking}</span>`);
         }
 
+        // Determine status badge text and style
+        let statusText = property.status;
+        if (property.status === 'For Sale') {
+            statusText = 'Available Now';
+        } else if (property.status === 'For Rent') {
+            statusText = 'Available Now';
+        }
+
+        // Create property title with bedroom count
+        const bedroomCount = features.bedrooms ? `${features.bedrooms} Bedroom` : '';
+        const propertyTitle = `${property.title.toUpperCase()} | ${bedroomCount}`;
+
         return `
             <div class="property-card" data-id="${property.id}">
                 <div class="property-image">
                     <img src="${property.image}" alt="${property.title}" onerror="this.src='https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
-                    <div class="property-status">${property.status}</div>
+                    <div class="property-status">${statusText}</div>
                 </div>
                 <div class="property-content">
-                    <h3 class="property-title">${property.title}</h3>
-                    <p class="property-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        ${property.location}
-                    </p>
-                    <div class="property-price">${property.price}</div>
-                    <div class="property-features">
-                        ${featureItems.join('')}
+                    <div class="property-header">
+                        <h3>${propertyTitle}</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            ${property.location}, Kenya
+                        </div>
                     </div>
-                    <p>${property.description}</p>
+                    <div class="property-price">${property.price}</div>
                     <div class="property-actions">
-                        <button class="btn btn-primary" onclick="viewProperty(${property.id})">
-                            <i class="fas fa-eye"></i> View Details
-                        </button>
-                        <button class="btn btn-outline" onclick="bookViewing(${property.id})">
-                            <i class="fas fa-calendar-check"></i> Book Viewing
-                        </button>
+                        <a href="#" class="btn btn-primary" onclick="viewProperty(${property.id})">
+                            <i class="fas fa-phone"></i> Contact Us
+                        </a>
+                        <a href="#" class="btn btn-outline" onclick="bookViewing(${property.id})">
+                            More Information
+                        </a>
                     </div>
                 </div>
             </div>
@@ -922,13 +932,30 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         console.log('Fallback: Checking properties again...');
         loadProperties();
-    }, 1000);
+    }, 500);
     
     // Additional fallback for mobile devices
     setTimeout(() => {
         console.log('Mobile fallback: Final properties check...');
         loadProperties();
-    }, 2000);
+    }, 1500);
+    
+    // Final fallback to ensure properties are displayed
+    setTimeout(() => {
+        console.log('Final fallback: Ensuring properties are visible...');
+        const propertiesGrid = document.getElementById('properties-grid');
+        const rentalPropertiesGrid = document.getElementById('rental-properties-grid');
+        
+        if (propertiesGrid && propertiesGrid.children.length === 0) {
+            console.log('Properties grid is empty, forcing reload...');
+            loadProperties();
+        }
+        
+        if (rentalPropertiesGrid && rentalPropertiesGrid.children.length === 0) {
+            console.log('Rental properties grid is empty, forcing reload...');
+            loadProperties();
+        }
+    }, 3000);
     
     console.log('Website initialized successfully!');
 
@@ -973,4 +1000,21 @@ setTimeout(() => {
         setTimeout(() => loader.remove(), 300);
     }
 }, 2000);
+
+// Navigation Active State Management
+function setActiveNavigation() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href');
+        
+        if (href === currentPage || 
+            (currentPage === 'index.html' && href === 'index.html') ||
+            (currentPage === '' && href === 'index.html')) {
+            link.classList.add('active');
+        }
+    });
+}
 
