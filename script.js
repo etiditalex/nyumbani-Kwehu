@@ -520,6 +520,15 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Loading properties...', { saleProperties: saleProperties.length, rentalProperties: rentalProperties.length });
         console.log('Current page:', window.location.pathname);
         
+        // Load featured properties for homepage
+        const featuredPropertiesGrid = document.getElementById('featured-properties-grid');
+        if (featuredPropertiesGrid) {
+            console.log('Featured properties grid found, loading 3 properties...');
+            const featuredProperties = saleProperties.slice(0, 3);
+            featuredPropertiesGrid.innerHTML = featuredProperties.map(createPropertyCard).join('');
+            console.log('Featured properties loaded:', featuredProperties.length);
+        }
+        
         if (propertiesGrid) {
             console.log('Properties grid found, loading sale properties...');
             propertiesGrid.innerHTML = saleProperties.map(createPropertyCard).join('');
