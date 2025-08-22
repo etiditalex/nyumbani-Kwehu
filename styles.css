@@ -545,6 +545,14 @@ body .page-header p {
 
 /* Mobile Responsive Hero Section */
 @media (max-width: 768px) {
+    .hero {
+        min-height: 500px;
+    }
+    
+    .hero-carousel {
+        height: 500px;
+    }
+    
     .carousel-content {
         margin-top: 100px;
         padding: 0 20px;
@@ -568,6 +576,31 @@ body .page-header p {
     .hero-buttons .btn {
         width: 100%;
         max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 500px;
+    }
+    
+    .hero-carousel {
+        height: 500px;
+    }
+    
+    .carousel-content {
+        margin-top: 80px;
+        padding: 0 15px;
+    }
+    
+    .carousel-content h1 {
+        font-size: clamp(1.8rem, 4vw, 2.2rem);
+        margin-bottom: 15px;
+    }
+    
+    .carousel-content p {
+        font-size: clamp(0.9rem, 3vw, 1rem);
+        margin-bottom: 20px;
     }
 }
 
