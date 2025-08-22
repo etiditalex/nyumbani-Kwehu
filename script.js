@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const properties = [
         {
             id: 1,
-            title: "Nyali Beachfront Villa",
+            title: "Bahari Gardens",
             location: "Nyali Beach",
             price: "KSh 8,500,000",
             type: "Villa",
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 6,
-            title: "Nyali Beachfront Condo",
+            title: "Bahari Gardens Condo",
             location: "Nyali Beach",
             price: "KSh 3,800,000",
             type: "Condo",
