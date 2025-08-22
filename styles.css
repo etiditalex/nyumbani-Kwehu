@@ -2753,65 +2753,7 @@ body .page-header p {
     }
 }
 
-/* WhatsApp Floating Button */
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
-    color: white;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    animation: pulse 2s infinite;
-}
 
-.whatsapp-float:hover {
-    background-color: #128c7e;
-    transform: scale(1.1);
-    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
-    }
-    50% {
-        box-shadow: 0 4px 25px rgba(37, 211, 102, 0.5);
-    }
-    100% {
-        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
-    }
-}
-
-@media (max-width: 768px) {
-    .whatsapp-float {
-        width: 55px;
-        height: 55px;
-        font-size: 28px;
-        bottom: 15px;
-        right: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        font-size: 25px;
-        bottom: 10px;
-        right: 10px;
-    }
-}
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
@@ -4362,6 +4304,146 @@ body .page-header p {
         width: 120px;
         height: 120px;
         font-size: 2.5rem;
+    }
+}
+
+/* Enquire Now Section */
+.enquire-now-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.enquire-now-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.enquire-now-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.enquire-now-text h2 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+    color: var(--white);
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.enquire-now-text p {
+    font-size: 1.3rem;
+    margin-bottom: 50px;
+    opacity: 0.95;
+    line-height: 1.7;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.enquire-now-actions {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.enquire-now-actions .btn {
+    padding: 18px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.enquire-now-actions .btn-primary {
+    background: var(--white);
+    color: var(--primary-color);
+    border: 2px solid var(--white);
+}
+
+.enquire-now-actions .btn-primary:hover {
+    background: transparent;
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.enquire-now-actions .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.enquire-now-actions .btn-outline:hover {
+    background: var(--white);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Responsive Enquire Now Section */
+@media (max-width: 768px) {
+    .enquire-now-section {
+        padding: 80px 0;
+    }
+    
+    .enquire-now-text h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .enquire-now-text p {
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+    }
+    
+    .enquire-now-actions {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .enquire-now-actions .btn {
+        padding: 16px 35px;
+        font-size: 1.1rem;
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .enquire-now-section {
+        padding: 60px 0;
+    }
+    
+    .enquire-now-text h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .enquire-now-text p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    
+    .enquire-now-actions .btn {
+        padding: 14px 30px;
+        font-size: 1rem;
     }
 }
 
