@@ -539,7 +539,7 @@ body .page-header p {
     color: var(--white);
     max-width: 800px;
     padding: 0 30px;
-    margin-top: 40px;
+    margin-top: 120px;
     animation: fadeInUp 1s ease-out;
 }
 
@@ -554,7 +554,7 @@ body .page-header p {
     }
     
     .carousel-content {
-        margin-top: 100px;
+        margin-top: 140px;
         padding: 0 20px;
     }
     
@@ -589,7 +589,7 @@ body .page-header p {
     }
     
     .carousel-content {
-        margin-top: 80px;
+        margin-top: 120px;
         padding: 0 15px;
     }
     
@@ -2766,7 +2766,7 @@ body .page-header p {
     }
     
     .carousel-content {
-        margin-top: 30px;
+        margin-top: 100px;
         padding: 0 20px;
     }
     
